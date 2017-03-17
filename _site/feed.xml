@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZhiRui's Blog</title>
+    <description>ZhiRuii's Ideas &amp; Blogs</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 17 Mar 2017 19:02:16 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Mar 2017 19:02:16 +0800</lastBuildDate>
+    <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>iframe有哪些缺点？</title>
+        <description>&lt;h2 id=&quot;答题思路和要点&quot;&gt;答题思路和要点&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;iframe会阻塞主页面的onload事件;&lt;/li&gt;
+  &lt;li&gt;搜索引擎的检索程序无法解读这种页面，不利于SEO;&lt;/li&gt;
+  &lt;li&gt;会影响页面的并行加载;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;知识补充什么是并行加载&quot;&gt;知识补充：什么是并行加载？&lt;/h3&gt;
+&lt;p&gt;并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。&lt;/p&gt;
+
+&lt;h2 id=&quot;加分项&quot;&gt;加分项&lt;/h2&gt;
+&lt;p&gt;如何进行优化？
+通过DOM操作动态添加iframe的src属性，让其变成异步的，避免对页面的阻塞。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/</guid>
+        
+        
+        <category>前端面试</category>
+        
+      </item>
+    
+      <item>
+        <title>Empty Template</title>
+        <description>&lt;h2 id=&quot;empty-diary-template&quot;&gt;Empty diary template&lt;/h2&gt;
+
+&lt;p&gt;Empty post template&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/12/28/empty-template/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
+        
+        
+        <category>paracraft</category>
+        
+      </item>
+    
+      <item>
+        <title>Empty Template</title>
+        <description>&lt;h2 id=&quot;empty-npl-tutorial-template&quot;&gt;Empty npl tutorial template&lt;/h2&gt;
+
+&lt;p&gt;Empty post template&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/12/28/empty-template/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
+        
+        
+        <category>npl</category>
+        
+      </item>
+    
+      <item>
+        <title>Empty Template</title>
+        <description>&lt;h2 id=&quot;empty-diary-template&quot;&gt;Empty diary template&lt;/h2&gt;
+
+&lt;p&gt;Empty post template&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/12/28/empty-template/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
+        
+        
+        <category>diary</category>
+        
+      </item>
+    
+      <item>
+        <title>useful links</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#paracraft&quot; id=&quot;markdown-toc-paracraft&quot;&gt;ParaCraft&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#npl&quot; id=&quot;markdown-toc-npl&quot;&gt;NPL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;paracraft&quot;&gt;ParaCraft&lt;/h3&gt;
+&lt;p&gt;http://www.paracraft.cn&lt;/p&gt;
+
+&lt;h3 id=&quot;npl&quot;&gt;NPL&lt;/h3&gt;
+&lt;p&gt;http://www.nplproject.com&lt;/p&gt;
+</description>
+        <pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2015/12/27/useful-links/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/12/27/useful-links/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
