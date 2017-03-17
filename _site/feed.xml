@@ -5,9 +5,51 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Mar 2017 23:27:14 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Mar 2017 23:27:14 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Mar 2017 00:31:42 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Mar 2017 00:31:42 +0800</lastBuildDate>
     <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>如何理解盒子模型？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#答题思路&quot; id=&quot;markdown-toc-答题思路&quot;&gt;答题思路&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#加分项&quot; id=&quot;markdown-toc-加分项&quot;&gt;加分项&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;答题思路&quot;&gt;答题思路&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;盒子模型有两种： W3C定义的标准盒子模型和IE盒子模型
+    &lt;ul&gt;
+      &lt;li&gt;W3C定义的盒子模型包括 margin、border、padding、content，元素的宽： width = content;&lt;/li&gt;
+      &lt;li&gt;IE盒子模型与标准盒子模型惟一的区别在与， 元素的宽： width = content + padding&lt;em&gt;2 + border&lt;/em&gt;2;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;个人理解：两种盒子模型中，我个人主观上觉得，IE盒子模型要更合理些。因为IE盒子模型更合乎我们生活中对于盒子的经验，盒子的宽度 = 纸盒厚度×2 + 填充物厚度×2 + 物品宽度;也许W3C的人员也认识到了其中的问题，所以在css3标准中加入了box-sizing样式&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;加分项&quot;&gt;加分项&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;对于行级元素，margin上下无效，margin左右有效;&lt;/li&gt;
+  &lt;li&gt;相邻块级元素的margin塌陷：
+    &lt;ul&gt;
+      &lt;li&gt;正正取最大&lt;/li&gt;
+      &lt;li&gt;负负取最小&lt;/li&gt;
+      &lt;li&gt;正负值相加&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        <pubDate>Fri, 17 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</guid>
+        
+        <category>css</category>
+        
+        
+        <category>interview</category>
+        
+      </item>
     
       <item>
         <title>iframe有哪些缺点？</title>
@@ -37,7 +79,7 @@
         <category>html</category>
         
         
-        <category>Interview</category>
+        <category>interview</category>
         
       </item>
     

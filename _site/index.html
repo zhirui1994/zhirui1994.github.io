@@ -132,6 +132,168 @@
         <hr>
         <ul>
             
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">如何理解盒子模型？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-17
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#css" title="Tag: css" rel="tag">css</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#答题思路" id="markdown-toc-答题思路">答题思路</a></li>
+  <li><a href="#加分项" id="markdown-toc-加分项">加分项</a></li>
+</ul>
+
+<h1 id="答题思路">答题思路</h1>
+<ol>
+  <li>盒子模型有两种： W3C定义的标准盒子模型和IE盒子模型
+    <ul>
+      <li>W3C定义的盒子模型包括 margin、border、padding、content，元素的宽： width = content;</li>
+      <li>IE盒子模型与标准盒子模型惟一的区别在与， 元素的宽： width = content + padding<em>2 + border</em>2;</li>
+    </ul>
+  </li>
+  <li>个人理解：两种盒子模型中，我个人主观上觉得，IE盒子模型要更合理些。因为IE盒子模型更合乎我们生活中对于盒子的经验，盒子的宽度 = 纸盒厚度×2 + 填充物厚度×2 + 物品宽度;也许W3C的人员也认识到了其中的问题，所以在css3标准中加入了box-sizing样式</li>
+</ol>
+
+<h1 id="加分项">加分项</h1>
+
+<ol>
+  <li>对于行级元素，margin上下无效，margin左右有效;</li>
+  <li>相邻块级元素的margin塌陷：
+    <ul>
+      <li>正正取最大</li>
+      <li>负负取最小</li>
+      <li>正负值相加</li>
+    </ul>
+  </li>
+</ol>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/">iframe有哪些缺点？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-16
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#答题思路和要点" id="markdown-toc-答题思路和要点">答题思路和要点</a></li>
+  <li><a href="#知识补充什么是并行加载" id="markdown-toc-知识补充什么是并行加载">知识补充：什么是并行加载？</a></li>
+  <li><a href="#加分项" id="markdown-toc-加分项">加分项</a></li>
+</ul>
+<h1 id="答题思路和要点">答题思路和要点</h1>
+<ol>
+  <li>iframe会阻塞主页面的onload事件;</li>
+  <li>搜索引擎的检索程序无法解读这种页面，不利于SEO;</li>
+  <li>会影响页面的并行加载;</li>
+</ol>
+
+<h1 id="知识补充什么是并行加载">知识补充：什么是并行加载？</h1>
+<p>并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。</p>
+
+<h1 id="加分项">加分项</h1>
+<p>如何进行优化？
+通过DOM操作动态添加iframe的src属性，让其变成异步的，避免对页面的阻塞。</p>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
         </ul>
 
 
@@ -142,7 +304,7 @@
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">/</span>
+          <span class="page_number ">1/1</span>
           
             <span class="next disable"><i class="fa fa-angle-right"></i></span>
             <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
@@ -159,6 +321,8 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">如何理解盒子模型？</a></li>
+                    
                         <li><a href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/">iframe有哪些缺点？</a></li>
                     
                 </ul>
@@ -173,11 +337,11 @@
                 <ul class="content-ul" cate>
                     
                     <li>
-                        <a href="/category/#Interview" class="categories-list-item" cate="Interview">
+                        <a href="/category/#interview" class="categories-list-item" cate="interview">
                             <span class="name">
-                                Interview
+                                interview
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -204,6 +368,13 @@
                       
                       
                       <a href="/tag/#html" style="font-size: 9pt; color: #999;">html</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#css" style="font-size: 9pt; color: #999;">css</a>
                     
                 </div>
             </div>

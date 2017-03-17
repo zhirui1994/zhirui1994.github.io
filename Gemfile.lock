@@ -19,6 +19,7 @@ GEM
       safe_yaml (~> 1.0)
     jekyll-feed (0.9.1)
       jekyll (~> 3.3)
+    jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-watch (1.5.0)
@@ -29,7 +30,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    paginate (4.0.1)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -46,7 +46,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (= 3.4.2)
   jekyll-feed (~> 0.6)
-  paginate
+  jekyll-paginate
   tzinfo-data
 
 RUBY VERSION
