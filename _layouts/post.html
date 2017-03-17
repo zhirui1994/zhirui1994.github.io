@@ -1,41 +1,102 @@
 ---
 layout: default
 ---
-<div class="row">
-  <div id="myArticle" class="col-sm-9">
-    <div class="post-area post">
-      <header>
-        <h1>{{ page.title }}</h1>
-        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-      </header>
-      <hr>
-      <article>
-        {{content}}
-      </article>
-      <hr>
-        <div class="bdsharebuttonbox">
-            <a href="#" class="bds_more" data-cmd="more"></a>
-            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-            <a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a>
-            <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+
+<div class="page clearfix" post>
+    <div class="left">
+        <h1>{{page.title}}</h1>
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>{{ page.date | date: "%F" }}
+            </div>
+
+            <div class="label-card">
+                {% if page.author %}<i class="fa fa-user"></i>{{ page.author }}
+                {% endif %}
+            </div>
+
+            <div class="label-card">
+                {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
+            </div>
+
+            <div class="label-card">
+            {% include category.html %}
+            </div>
+
+            <div class="label-card">
+            {% include tag.html %}
+            </div>
+
         </div>
-        <script>
-            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        {{content}}
+        </article>
+        <hr>
+
+        {% assign hasSimilar = '' %}
+        {% for post in site.related_posts %}
+            {% assign postHasSimilar = false %}
+            {% for tag in post.tags %}
+                {% for thisTag in page.tags %}
+                    {% if postHasSimilar == false and hasSimilar.size < 6 and post != page and tag == thisTag %}
+                        {% if hasSimilar.size == 0 %}
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        {% endif %}
+                        <li class="relatedPost">
+                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
+                            {% if post.series %}
+                                (Series: {{ post.series }})
+                            {% endif %}
+                            </a>
+                        </li>
+                        {% capture hasSimilar %}{{ hasSimilar }}*{% endcapture %}
+                        {% assign postHasSimilar = true %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endfor %}
+        {% if hasSimilar.size > 0 %}
+            </ul>
+        {% endif %}
+
+        {% include previousAndNext.html %}
+
+        <h2 id="comments">Comments</h2>
+        {% include comments.html %}
+
+
     </div>
-	{% include comments.html %}
-  </div>
-  
-  <div id="content" class="col-sm-3">
-    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
-    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
-      <div class="categories-list-header">
-        Content
-      </div>
-      <div class="content-text"></div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    <li><a href="#comments">Comments</a></li>
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
     </div>
-  </div>
-  
 </div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

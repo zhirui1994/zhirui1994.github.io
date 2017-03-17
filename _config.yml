@@ -1,36 +1,60 @@
-# Site settings
-title: ZhiRui's Blog
-email: www.zhirui@foxmail.com
-description: ZhiRuii's Ideas & Blogs
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username: zhirui1994
+# Site settings
+title: ZHIRUI
+brief-intro: Front-end  Engineer
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://zhirui1994.github.io" # the base hostname & protocol for your site
+
 permalink: /:year/:month/:day/:title/
-# this is the url root of the view source link on the footer page.
-viewsourceroot: https://github.com/zhirui1994/zhirui1994.github.io
-# this is the url root of the create page link on the footer page.
-newsourceroot: 
-#########################################
-# for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com. 
-#duoshuo_shortname: lixizhi
-#duoshuo_url: "http://lixizhi.github.io"
-# disqus.com commenting system. please note that it is exclusive with duoshuo.com
-disqus_shortname: 
-disqus_url: 
+
+# other links
+# twitter_username: 
+# facebook_username: 
+github_username:  zhirui1994
+email: www.zhirui@foxmail.com
+# weibo_username: 
+# zhihu_username: 
+# linkedIn_username: 
+# dribbble_username:
+
+# description_footer: 
+
+# comments
+# two ways to comment, only choose one, and use your own short name
+# 两种评论插件，选一个就好了，使用自己的 short_name
 duoshuo_shortname: zhirui
-duoshuo_url: "http://zhirui.duoshuo.com"
-#########################################
+disqus_shortname: #gaohaoyang
+
+# statistic analysis 统计代码
+# 百度统计 id，将统计代码替换为自己的百度统计id，即
+# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
+# xxxxx字符串
+baidu_tongji_id: 660cf741c8480bc7ecd6c94297066d5b 
+# google_analytics_id: # google 分析追踪id
 
 # Build settings
 markdown: kramdown
 
-# highlight
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# port
+# port: 1234
+
+# url
+category_dir: category/
+tag_dir: tag/
+
+# excerpt
+excerpt_separator: "\n\n\n\n"
+
+# paginate
+# gems: [jekyll-paginate]
+# paginate: 6
