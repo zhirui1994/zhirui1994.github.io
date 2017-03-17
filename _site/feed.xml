@@ -5,8 +5,8 @@
     <description>ZhiRuii's Ideas &amp; Blogs</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Mar 2017 19:32:29 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Mar 2017 19:32:29 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Mar 2017 20:04:50 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Mar 2017 20:04:50 +0800</lastBuildDate>
     <generator>Jekyll v3.4.2</generator>
     
       <item>
@@ -30,72 +30,7 @@
         <guid isPermaLink="true">http://localhost:4000/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/</guid>
         
         
-        <category>前端面试</category>
-        
-      </item>
-    
-      <item>
-        <title>Empty Template</title>
-        <description>&lt;h2 id=&quot;empty-diary-template&quot;&gt;Empty diary template&lt;/h2&gt;
-
-&lt;p&gt;Empty post template&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/12/28/empty-template/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
-        
-        
-        <category>paracraft</category>
-        
-      </item>
-    
-      <item>
-        <title>Empty Template</title>
-        <description>&lt;h2 id=&quot;empty-npl-tutorial-template&quot;&gt;Empty npl tutorial template&lt;/h2&gt;
-
-&lt;p&gt;Empty post template&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/12/28/empty-template/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
-        
-        
-        <category>npl</category>
-        
-      </item>
-    
-      <item>
-        <title>Empty Template</title>
-        <description>&lt;h2 id=&quot;empty-diary-template&quot;&gt;Empty diary template&lt;/h2&gt;
-
-&lt;p&gt;Empty post template&lt;/p&gt;
-</description>
-        <pubDate>Mon, 28 Dec 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/12/28/empty-template/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/28/empty-template/</guid>
-        
-        
-        <category>diary</category>
-        
-      </item>
-    
-      <item>
-        <title>useful links</title>
-        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#paracraft&quot; id=&quot;markdown-toc-paracraft&quot;&gt;ParaCraft&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#npl&quot; id=&quot;markdown-toc-npl&quot;&gt;NPL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;paracraft&quot;&gt;ParaCraft&lt;/h3&gt;
-&lt;p&gt;http://www.paracraft.cn&lt;/p&gt;
-
-&lt;h3 id=&quot;npl&quot;&gt;NPL&lt;/h3&gt;
-&lt;p&gt;http://www.nplproject.com&lt;/p&gt;
-</description>
-        <pubDate>Sun, 27 Dec 2015 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2015/12/27/useful-links/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/12/27/useful-links/</guid>
-        
+        <category>Interview</category>
         
       </item>
     
