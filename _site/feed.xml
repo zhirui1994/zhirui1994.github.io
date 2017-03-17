@@ -5,29 +5,36 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 17 Mar 2017 22:18:48 +0800</pubDate>
-    <lastBuildDate>Fri, 17 Mar 2017 22:18:48 +0800</lastBuildDate>
+    <pubDate>Fri, 17 Mar 2017 22:44:52 +0800</pubDate>
+    <lastBuildDate>Fri, 17 Mar 2017 22:44:52 +0800</lastBuildDate>
     <generator>Jekyll v3.4.2</generator>
     
       <item>
         <title>iframe有哪些缺点？</title>
-        <description>&lt;h2 id=&quot;答题思路和要点&quot;&gt;答题思路和要点&lt;/h2&gt;
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#答题思路和要点&quot; id=&quot;markdown-toc-答题思路和要点&quot;&gt;答题思路和要点&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#知识补充什么是并行加载&quot; id=&quot;markdown-toc-知识补充什么是并行加载&quot;&gt;知识补充：什么是并行加载？&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#加分项&quot; id=&quot;markdown-toc-加分项&quot;&gt;加分项&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;答题思路和要点&quot;&gt;答题思路和要点&lt;/h1&gt;
 &lt;ol&gt;
   &lt;li&gt;iframe会阻塞主页面的onload事件;&lt;/li&gt;
   &lt;li&gt;搜索引擎的检索程序无法解读这种页面，不利于SEO;&lt;/li&gt;
   &lt;li&gt;会影响页面的并行加载;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;知识补充什么是并行加载&quot;&gt;知识补充：什么是并行加载？&lt;/h3&gt;
+&lt;h1 id=&quot;知识补充什么是并行加载&quot;&gt;知识补充：什么是并行加载？&lt;/h1&gt;
 并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。
 
-&lt;h2 id=&quot;加分项&quot;&gt;加分项&lt;/h2&gt;
+&lt;h1 id=&quot;加分项&quot;&gt;加分项&lt;/h1&gt;
 如何进行优化？
 通过DOM操作动态添加iframe的src属性，让其变成异步的，避免对页面的阻塞。
 </description>
         <pubDate>Thu, 16 Mar 2017 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/</link>
         <guid isPermaLink="true">http://localhost:4000/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/</guid>
+        
+        <category>html</category>
         
         
         <category>Interview</category>

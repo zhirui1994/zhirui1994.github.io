@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>iframe有哪些缺点？</title>
-    <meta name="description" content="答题思路和要点  iframe会阻塞主页面的onload事件;  搜索引擎的检索程序无法解读这种页面，不利于SEO;  会影响页面的并行加载;知识补充：什么是并行加载？并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。加分项如何进行优化？通过D...">
+    <meta name="description" content="  答题思路和要点  知识补充：什么是并行加载？  加分项答题思路和要点  iframe会阻塞主页面的onload事件;  搜索引擎的检索程序无法解读这种页面，不利于SEO;  会影响页面的并行加载;知识补充：什么是并行加载？并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
@@ -168,6 +168,9 @@
   <i class="fa fa-tags"></i>
   
     
+        <!--a href="/tag/#html" title="Tag: html" rel="tag">html</a-->
+        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>
+    
   
 
 </span>
@@ -177,17 +180,22 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 id="答题思路和要点">答题思路和要点</h2>
+        <ul id="markdown-toc">
+  <li><a href="#答题思路和要点" id="markdown-toc-答题思路和要点">答题思路和要点</a></li>
+  <li><a href="#知识补充什么是并行加载" id="markdown-toc-知识补充什么是并行加载">知识补充：什么是并行加载？</a></li>
+  <li><a href="#加分项" id="markdown-toc-加分项">加分项</a></li>
+</ul>
+<h1 id="答题思路和要点">答题思路和要点</h1>
 <ol>
   <li>iframe会阻塞主页面的onload事件;</li>
   <li>搜索引擎的检索程序无法解读这种页面，不利于SEO;</li>
   <li>会影响页面的并行加载;</li>
 </ol>
 
-<h3 id="知识补充什么是并行加载">知识补充：什么是并行加载？</h3>
+<h1 id="知识补充什么是并行加载">知识补充：什么是并行加载？</h1>
 <p>并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。</p>
 
-<h2 id="加分项">加分项</h2>
+<h1 id="加分项">加分项</h1>
 <p>如何进行优化？
 通过DOM操作动态添加iframe的src属性，让其变成异步的，避免对页面的阻塞。</p>
 
@@ -281,9 +289,6 @@
             Contact me at: 
             <a href="https://github.com/zhirui1994" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
             <a href="mailto:www.zhirui@foxmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
-        </p>
-        <p>
-            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
         </p>
         <p class="power">
             <span>
