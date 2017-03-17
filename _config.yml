@@ -14,16 +14,16 @@ url: "https://zhirui1994.github.io" # the base hostname & protocol for your site
 permalink: /:year/:month/:day/:title/
 
 # other links
-# twitter_username: 
-# facebook_username: 
+twitter_username: 
+facebook_username: 
 github_username:  zhirui1994
 email: www.zhirui@foxmail.com
-# weibo_username: 
-# zhihu_username: 
-# linkedIn_username: 
-# dribbble_username:
+weibo_username: 
+zhihu_username: 
+linkedIn_username: 
+dribbble_username:
 
-# description_footer: 
+description_footer: '' 
 
 # comments
 # two ways to comment, only choose one, and use your own short name
@@ -55,6 +55,6 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: "\n\n\n\n"
 
- paginate
- gems: [jekyll-paginate]
- paginate: 6
+# paginate
+#gems: [jekyll-paginate]
+#paginate: 6
