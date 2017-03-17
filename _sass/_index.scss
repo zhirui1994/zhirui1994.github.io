@@ -78,7 +78,11 @@
         }
     }
     .right {
+        position: sticky;
+        top: 0;
         .wrap {
+            position: sticky;
+            top: 0;
             .side {
                 margin-bottom: 20px;
                 padding-bottom: 0;
