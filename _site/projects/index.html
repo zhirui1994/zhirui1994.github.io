@@ -219,23 +219,21 @@ I am using it to promote NPL language in self learning college to teach students
 	
     <!-- duoshuo.com javascript include code. -->    
     
-    <!-- disqus.com javascript include code. -->
-	
-    <div class="post-area post comment">
-        <div id="disqus_thread"></div>
-    </div>
-	<script>
-		var disqus_config = function () {
-			this.page.url = "http://zhiuri1994.github.io/projects/"; 
-			this.page.identifier = ""; 
-		};
+      <div class="post-area post comment">
+        <div class="ds-thread" data-thread-key="" data-title="Projects" data-url="http://zhirui1994.duoshuo.com/projects/"></div>
+      </div>
+	  <script type="text/javascript">
+		var duoshuoQuery = {short_name:"zhirui1994"};
 		(function() {
-			var d = document, s = d.createElement('script');
-			s.src = '//zhirui.disqus.com/embed.js';
-			s.setAttribute('data-timestamp', +new Date());
-			(d.head || d.body).appendChild(s);
+		  var ds = document.createElement('script');
+		  ds.type = 'text/javascript';ds.async = true;
+		  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		  ds.charset = 'UTF-8';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
 		})();
-	</script>
+	  </script>
+	
+    <!-- disqus.com javascript include code. -->
 	
     
   </div>

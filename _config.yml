@@ -21,8 +21,10 @@ newsourceroot:
 #duoshuo_shortname: lixizhi
 #duoshuo_url: "http://lixizhi.github.io"
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
-disqus_shortname: zhirui
-disqus_url: "http://zhiuri1994.github.io"
+disqus_shortname: 
+disqus_url: 
+duoshuo_shortname: zhirui1994
+duoshuo_url: "http://zhirui1994.duoshuo.com"
 #########################################
 
 # Build settings
