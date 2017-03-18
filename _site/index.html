@@ -134,6 +134,246 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2017/03/18/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/">如何实现一个简单的事件模型？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#javascript" title="Tag: javascript" rel="tag">javascript</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#原理" id="markdown-toc-原理">原理</a></li>
+  <li><a href="#实现" id="markdown-toc-实现">实现</a></li>
+</ul>
+
+<h1 id="原理">原理</h1>
+
+<p>事件模型，就是实现事件的绑定监听。实质上就是，23种设计模式中的观察者模式（又叫发布者-订阅者模式），是最常用的设计模式之一。我们常接触的js的dom事件就是观察者模式的实现。</p>
+
+<h1 id="实现">实现</h1>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Events</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">listen</span><span class="p">,</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">obj</span><span class="p">,</span> <span class="nx">one</span><span class="p">,</span> <span class="nx">remove</span><span class="p">,</span> <span class="nx">trigger</span><span class="p">,</span> <span class="nx">__this</span><span class="p">;</span>
+    <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
+    <span class="nx">__this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+    
+    <span class="nx">listen</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">eventfn</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">stack</span><span class="p">,</span> <span class="nx">_ref</span><span class="p">;</span>
+        <span class="nx">stack</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">_ref</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">?</span> <span class="nx">_ref</span> <span class="p">:</span> <span class="nx">obj</span><span class="p">[</span> <span class="nx">key</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">return</span> <span class="nx">stack</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span> <span class="nx">eventfn</span> <span class="p">);</span>
+ 
+    <span class="p">};</span>
+    
+    <span class="nx">one</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">eventfn</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">remove</span><span class="p">(</span> <span class="nx">key</span> <span class="p">);</span>
+        <span class="k">return</span> <span class="nx">listen</span><span class="p">(</span> <span class="nx">key</span><span class="p">,</span> <span class="nx">eventfn</span> <span class="p">);</span> 
+    <span class="p">};</span>
+ 
+    <span class="nx">remove</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">key</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">_ref</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span> <span class="nx">_ref</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">?</span> <span class="nx">_ref</span><span class="p">.</span><span class="nx">length</span> <span class="o">=</span> <span class="mi">0</span> <span class="p">:</span> <span class="k">void</span> <span class="mi">0</span><span class="p">;</span>
+ 
+    <span class="p">};</span>
+ 
+    <span class="nx">trigger</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">fn</span><span class="p">,</span> <span class="nx">stack</span><span class="p">,</span> <span class="nx">_i</span><span class="p">,</span> <span class="nx">_len</span><span class="p">,</span> <span class="nx">_ref</span><span class="p">,</span> <span class="nx">key</span><span class="p">;</span>
+        <span class="nx">key</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">shift</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">arguments</span> <span class="p">);</span> 
+        <span class="nx">stack</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">_ref</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">[</span> <span class="nx">key</span> <span class="p">]</span> <span class="p">)</span> <span class="o">!=</span> <span class="kc">null</span> <span class="p">?</span> <span class="nx">_ref</span> <span class="p">:</span> <span class="nx">obj</span><span class="p">[</span> <span class="nx">key</span> <span class="p">]</span> <span class="o">=</span> <span class="p">[];</span>
+        
+        <span class="k">for</span> <span class="p">(</span> <span class="nx">_i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">_len</span> <span class="o">=</span> <span class="nx">stack</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">_i</span> <span class="o">&lt;</span> <span class="nx">_len</span><span class="p">;</span> <span class="nx">_i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">fn</span> <span class="o">=</span> <span class="nx">stack</span><span class="p">[</span> <span class="nx">_i</span> <span class="p">];</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span> <span class="nx">__this</span><span class="p">,</span>  <span class="nx">arguments</span> <span class="p">)</span> <span class="o">===</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>  
+ 
+    <span class="k">return</span> <span class="p">{</span>
+       <span class="na">listen</span><span class="p">:</span> <span class="nx">listen</span><span class="p">,</span>
+       <span class="na">one</span><span class="p">:</span> <span class="nx">one</span><span class="p">,</span>
+       <span class="na">remove</span><span class="p">:</span> <span class="nx">remove</span><span class="p">,</span>
+       <span class="na">trigger</span><span class="p">:</span> <span class="nx">trigger</span>
+       <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/18/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/18/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/">元素定位(position)有哪些？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#css" title="Tag: css" rel="tag">css</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#答题思路" id="markdown-toc-答题思路">答题思路</a>    <ul>
+      <li><a href="#1语法" id="markdown-toc-1语法">1.语法</a></li>
+      <li><a href="#2取值" id="markdown-toc-2取值">2.取值</a></li>
+    </ul>
+  </li>
+  <li><a href="#加分项" id="markdown-toc-加分项">加分项</a>    <ul>
+      <li><a href="#绝对定位元素的定位值发生冲突时的解决方法" id="markdown-toc-绝对定位元素的定位值发生冲突时的解决方法">绝对定位元素的定位值发生冲突时的解决方法:</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="答题思路">答题思路</h1>
+
+<p>元素的定位属性为position：</p>
+
+<h2 id="1语法">1.语法</h2>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code>    <span class="c">/* 关键字 值 */</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">static</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">relative</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">absolute</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">fixed</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">sticky</span><span class="o">;</span>
+    <span class="c">/* sticky仍处于实验阶段，兼容性不好 */</span>
+
+    <span class="c">/* 全局值 */</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">inherit</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">initial</span><span class="o">;</span>
+    <span class="nt">position</span><span class="o">:</span> <span class="nt">unset</span><span class="o">;</span>
+</code></pre>
+</div>
+<h2 id="2取值">2.取值</h2>
+<ul>
+  <li>static
+    <blockquote>
+      <p>静态值，元素的默认布局行为，元素在文档流中当前布局位置。此时，top、right、left、bottom、z-index属性无效;</p>
+    </blockquote>
+  </li>
+  <li>relative
+    <blockquote>
+      <p>相对定位，元素在文档流中，相对于自身进行偏移。position:relative未定义对table-group、table-row、table-column、table-cell、table-caption元素应用的效果;</p>
+    </blockquote>
+  </li>
+  <li>absolute
+    <blockquote>
+      <p>绝对定位，元素脱离文档流，不为元素预留空间，相对于最近的非static定位祖先元素进行偏移。</p>
+    </blockquote>
+  </li>
+  <li>fixed
+    <blockquote>
+      <p>固定定位，元素脱离文档流，不为元素预留空间，相对于屏幕视口(viewport)进行偏移。元素位置在屏幕滚动时不会改变。当元素祖先的transform属性不是none时，参照定位的容器由视口变成改祖先。</p>
+    </blockquote>
+  </li>
+  <li>sticky
+    <blockquote>
+      <p>粘性定位，粘性定位是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。当元素 B 被粘性定位时，后续元素的位置仍按照 B 未定位时的位置来确定。position: sticky 对 table 元素的效果与 position: relative 相同。</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h1 id="加分项">加分项</h1>
+
+<h2 id="绝对定位元素的定位值发生冲突时的解决方法">绝对定位元素的定位值发生冲突时的解决方法:</h2>
+
+<ul>
+  <li>如果同时指定 top 和 bottom（非 auto），优先采用 top。</li>
+  <li>如果同时指定 left 和 right，若 direction 为 ltr（英语、汉语等），则优先采用 left；若 direction 为 rtl（阿拉伯语、希伯来语等），则优先采用 right。</li>
+</ul>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/18/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">如何理解盒子模型？</a>
                 </h2>
                 <div class="label">
@@ -321,6 +561,10 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2017/03/18/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/">如何实现一个简单的事件模型？</a></li>
+                    
+                        <li><a href="/2017/03/18/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/">元素定位(position)有哪些？</a></li>
+                    
                         <li><a href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">如何理解盒子模型？</a></li>
                     
                         <li><a href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/">iframe有哪些缺点？</a></li>
@@ -341,7 +585,7 @@
                             <span class="name">
                                 interview
                             </span>
-                            <span class="badge">2</span>
+                            <span class="badge">4</span>
                         </a>
                     </li>
                     
@@ -374,7 +618,14 @@
                       
                       
                       
-                      <a href="/tag/#css" style="font-size: 9pt; color: #999;">css</a>
+                      <a href="/tag/#css" style="font-size: 18pt; color: #000;">css</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#javascript" style="font-size: 9pt; color: #999;">javascript</a>
                     
                 </div>
             </div>
