@@ -5,9 +5,278 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 18 Mar 2017 17:05:03 +0800</pubDate>
-    <lastBuildDate>Sat, 18 Mar 2017 17:05:03 +0800</lastBuildDate>
+    <pubDate>Sat, 18 Mar 2017 22:16:52 +0800</pubDate>
+    <lastBuildDate>Sat, 18 Mar 2017 22:16:52 +0800</lastBuildDate>
     <generator>Jekyll v3.4.2</generator>
+    
+      <item>
+        <title>浏览器兼容模式内核渲染？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#前言&quot; id=&quot;markdown-toc-前言&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#代码场景&quot; id=&quot;markdown-toc-代码场景&quot;&gt;代码场景&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#常用的例子&quot; id=&quot;markdown-toc-常用的例子&quot;&gt;常用的例子：&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ie文档兼容性模式所有可能的值&quot; id=&quot;markdown-toc-ie文档兼容性模式所有可能的值&quot;&gt;IE文档兼容性模式所有可能的值：&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#注意事项&quot; id=&quot;markdown-toc-注意事项&quot;&gt;注意事项：&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+&lt;blockquote&gt;
+  X-UA-Compatible是自从IE8新加的一个设置，对于IE8以下的浏览器是不识别的。通过在meta中设置X-UA-Compatible的值，可以指定网页的兼容性模式设置。
+在网页中指定的模式优先权高于服务器中(通过HTTP Header)所指定的模式。 兼容性模式设置优先级：
+  &lt;ul&gt;
+    &lt;li&gt;meta tag &amp;gt; http header&lt;/li&gt;
+    &lt;li&gt;meta tag &amp;gt; http header&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;代码场景&quot;&gt;代码场景&lt;/h1&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 8]&amp;gt;
+    &amp;lt;meta http-equiv = &quot;X-UA-Compatible&quot; content = &quot;IE=7,chrome=1&quot; /&amp;gt;
+    &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if ! IE 8]&amp;gt;
+    &amp;lt;meta http-equiv = &quot;X-UA-Compatible&quot; content = &quot;IE=edge,chrome=1&quot; /&amp;gt;      
+    &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+   
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 9]&amp;gt;
+      &amp;lt;script src=&quot;Scripts/html5shiv.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+      &amp;lt;script src=&quot;Scripts/respond.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Styles/style.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Scripts/jquery.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 8]&amp;gt;
+    &amp;lt;meta http-equiv = &quot;X-UA-Compatible&quot; content = &quot;IE=7,chrome=1&quot; /&amp;gt;
+    &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Styles/style.css&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/css&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 9]&amp;gt;
+      &amp;lt;script src=&quot;http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+      &amp;lt;script src=&quot;http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;常用的例子&quot;&gt;常用的例子：&lt;/h1&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=7&quot;&lt;/span&gt;&amp;gt;
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=8&quot;&lt;/span&gt;&amp;gt;  
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt;&amp;gt;  
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=7,IE=9&quot;&lt;/span&gt;&amp;gt;  
+&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=7,9&quot;&lt;/span&gt;&amp;gt;  
+&amp;lt;meta http-equiv&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;IE=Edge,chrome=1&quot;&lt;/span&gt;&amp;gt;
+&lt;span class=&quot;c&quot;&gt;#以上代码IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.&lt;/span&gt;
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=7&quot;&lt;/span&gt; &amp;gt;   
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=8&quot;&lt;/span&gt; &amp;gt;   
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=edge&quot;&lt;/span&gt; &amp;gt;   
+&lt;span class=&quot;c&quot;&gt;#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  &lt;/span&gt;
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=7,IE=9&quot;&lt;/span&gt; &amp;gt;   
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=7,9&quot;&lt;/span&gt; &amp;gt;   
+&amp;lt;meta http-equiv &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;X-UA-Compatible&quot;&lt;/span&gt; content &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;IE=Edge,chrome=1&quot;&lt;/span&gt; &amp;gt;
+&lt;span class=&quot;c&quot;&gt;# 以上代码IE = edge告诉IE使用最新的引擎渲染网页，chrome = 1则可以激活Chrome Frame .&lt;/span&gt;
+Google Chrome Frame 百科
+“IE&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Edge,chrome&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1″这样简单快捷，但是弊端是代码将无法通过W3C验证。其实这并不是问题，毕竟标准只是标准，如果只有这一个“错误”完全不会有任何不良的影响。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;ie文档兼容性模式所有可能的值&quot;&gt;IE文档兼容性模式所有可能的值：&lt;/h1&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Emulate IE8 mode &lt;span class=&quot;c&quot;&gt;#指示IE使用&amp;lt;!DOCTYPE&amp;gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&amp;lt;!DOCTYPE&amp;gt;指令。&lt;/span&gt;
+Emulate IE7 mode &lt;span class=&quot;c&quot;&gt;#指示IE使用&amp;lt;!DOCTYPE&amp;gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&amp;lt;!DOCTYPE&amp;gt;指令。对于许多网页来说这是最推荐的兼容性模式。&lt;/span&gt;
+IE5 mode &lt;span class=&quot;c&quot;&gt;#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。&lt;/span&gt;
+IE7 mode &lt;span class=&quot;c&quot;&gt;#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&amp;lt;!DOCTYPE&amp;gt;指令。&lt;/span&gt;
+IE8 mode &lt;span class=&quot;c&quot;&gt;#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。&lt;/span&gt;
+Edge mode &lt;span class=&quot;c&quot;&gt;#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。&lt;/span&gt;
+Emulate IE8 mode &lt;span class=&quot;c&quot;&gt;#指示IE使用&amp;lt;!DOCTYPE&amp;gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&amp;lt;!DOCTYPE&amp;gt;指令。&lt;/span&gt;
+Emulate IE7 mode &lt;span class=&quot;c&quot;&gt;#指示IE使用&amp;lt;!DOCTYPE&amp;gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&amp;lt;!DOCTYPE&amp;gt;指令。对于许多网页来说这是最推荐的兼容性模式。&lt;/span&gt;
+IE5 mode &lt;span class=&quot;c&quot;&gt;#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。&lt;/span&gt;
+IE7 mode &lt;span class=&quot;c&quot;&gt;#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&amp;lt;!DOCTYPE&amp;gt;指令。&lt;/span&gt;
+IE8 mode &lt;span class=&quot;c&quot;&gt;#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。&lt;/span&gt;
+Edge mode &lt;span class=&quot;c&quot;&gt;#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h1 id=&quot;注意事项&quot;&gt;注意事项：&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;根据官网定义X-UA-compatible 标头不区分大小写；不过，它必须显示在网页中除 title 元素和其他 meta 元素以外的所有其他元素之前。如果不是的话，它不起作用&lt;/li&gt;
+  &lt;li&gt;content的内容是IE=8，或者IE=edge等值，注意不是IE8或者直接写个edge的值，否则不起作用&lt;/li&gt;
+&lt;/ol&gt;
+
+如果对WEb服务器了解，可以直接配置一下VirtualHost: Apache:
+&lt;div class=&quot;language-apache highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; mod_setenvif.c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; mod_headers.c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;nc&quot;&gt;BrowserMatch&lt;/span&gt; MSIE ie
+    &lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;set&lt;/span&gt; X-UA-Compatible &quot;IE=Edge&quot; env=ie
+    &lt;span class=&quot;nc&quot;&gt;BrowserMatch&lt;/span&gt; chromeframe gcf
+    &lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;append&lt;/span&gt; X-UA-Compatible &quot;chrome=1&quot; env=gcf
+  &lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; mod_setenvif.c &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&amp;lt;&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; mod_headers.c &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;BrowserMatch&lt;/span&gt; MSIE ie
+&lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;set&lt;/span&gt; X - UA - Compatible &quot;IE=Edge&quot; &lt;span class=&quot;ss&quot;&gt;env&lt;/span&gt; = ie
+&lt;span class=&quot;nc&quot;&gt;BrowserMatch&lt;/span&gt; chromeframe gcf
+&lt;span class=&quot;nc&quot;&gt;Header&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;append&lt;/span&gt; X - UA - Compatible &quot;chrome=1&quot; &lt;span class=&quot;ss&quot;&gt;env&lt;/span&gt; = gcf
+&lt;span class=&quot;p&quot;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&amp;lt;/&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;IfModule&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/</guid>
+        
+        <category>html</category>
+        
+        <category>X-UA-Compatible</category>
+        
+        
+        <category>interview</category>
+        
+      </item>
+    
+      <item>
+        <title>如何进行浏览器条件注释？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#通过条件注释判断浏览器&quot; id=&quot;markdown-toc-通过条件注释判断浏览器&quot;&gt;通过条件注释判断浏览器&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#说明&quot; id=&quot;markdown-toc-说明&quot;&gt;说明&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#范例&quot; id=&quot;markdown-toc-范例&quot;&gt;范例&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;通过条件注释判断浏览器&quot;&gt;通过条件注释判断浏览器&lt;/h1&gt;
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if !IE]&amp;gt;除IE外都可识别&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE]&amp;gt; 所有的IE可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 6]&amp;gt; 仅IE6可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 6]&amp;gt; IE6以及IE6以下版本可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if gte IE 6]&amp;gt; IE6以及IE6以上版本可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 7]&amp;gt; 仅IE7可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 7]&amp;gt; IE7以及IE7以下版本可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if gte IE 7]&amp;gt; IE7以及IE7以上版本可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 8]&amp;gt; 仅IE8可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if IE 9]&amp;gt; 仅IE9可识别 &amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;说明&quot;&gt;说明&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;! ： [if !IE]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;NOT运算符。这是摆立即在前面的功能，操作员，或子表达式扭转布尔表达式的意义。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lt ： [if lt IE 5.5]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;小于运算符。如果第一个参数小于第二个参数，则返回true。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;lte ：[if lte IE 6]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;小于或等于运算。如果第一个参数是小于或等于第二个参数，则返回true。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gt ：[if gt IE 5]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;大于运算符。如果第一个参数大于第二个参数，则返回true。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gte ：[if gte IE 7]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;大于或等于运算。如果第一个参数是大于或等于第二个参数，则返回true。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;( ) ：[if !(IE 7)]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;子表达式运营商。在与布尔运算符用于创建更复杂的表达式。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp; ：[if (gt IE 5)&amp;amp;(lt IE 7)]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;AND运算符。如果所有的子表达式计算结果为true，返回true&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;| ： if (IE 6)|(IE 7)]&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;OR运算符。返回true，如果子表达式计算结果为true。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;范例&quot;&gt;范例&lt;/h1&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 9]&amp;gt;
+加载CSS1
+&amp;lt;!--[else]&amp;gt;
+加载CSS2
+&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+这样有效是有效,但是用HTML VALIDATOR里,报错,因为这个不符合XHTML 1.1的规范,
+如果把ELSE语句去掉,则正确.
+
+方法：
+加载CSS2
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--[if lt IE 9]&amp;gt;
+加载CSS1(可以把要重写的写在这里).
+&amp;lt;![endif]--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/</guid>
+        
+        <category>html</category>
+        
+        <category>浏览器兼容</category>
+        
+        
+        <category>html</category>
+        
+      </item>
+    
+      <item>
+        <title>不同浏览器的的css识别符？</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#不同浏览器hack的标识符&quot; id=&quot;markdown-toc-不同浏览器hack的标识符&quot;&gt;不同浏览器hack的标识符&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#不同流浏览器的前缀&quot; id=&quot;markdown-toc-不同流浏览器的前缀&quot;&gt;不同流浏览器的前缀&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;不同浏览器hack的标识符&quot;&gt;不同浏览器hack的标识符&lt;/h1&gt;
+&lt;div class=&quot;language-scss highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;_color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;           &lt;span class=&quot;cm&quot;&gt;/*IE6 专用*/&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mh&quot;&gt;#red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;cm&quot;&gt;/*IE6 专用*/&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;           &lt;span class=&quot;cm&quot;&gt;/*IE6,7 专用*/&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;           &lt;span class=&quot;cm&quot;&gt;/*IE6,7 专用*/&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;cm&quot;&gt;/*IE6,7 专用*/&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;*+&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;          &lt;span class=&quot;cm&quot;&gt;/*IE7 专用*/&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;Body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;cm&quot;&gt;/*屏蔽 IE6*/&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:red&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;          &lt;span class=&quot;cm&quot;&gt;/*IE8*/&lt;/span&gt;   
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;不同流浏览器的前缀&quot;&gt;不同流浏览器的前缀&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Firefox: -moz-&lt;/li&gt;
+  &lt;li&gt;Safari: -webkit-&lt;/li&gt;
+  &lt;li&gt;Opera: -o-&lt;/li&gt;
+  &lt;li&gt;IE: -ms-&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 18 Mar 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/</guid>
+        
+        <category>css</category>
+        
+        <category>浏览器兼容</category>
+        
+        
+        <category>css</category>
+        
+      </item>
     
       <item>
         <title>如何实现一个简单的事件模型？</title>
@@ -22,7 +291,7 @@
 
 &lt;h1 id=&quot;实现&quot;&gt;实现&lt;/h1&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Events&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Event&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;listen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;one&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;__this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;

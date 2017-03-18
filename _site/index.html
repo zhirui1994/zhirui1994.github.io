@@ -119,6 +119,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -131,6 +133,407 @@
         <small>Living for coding the world!</small>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/">浏览器兼容模式内核渲染？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>&nbsp;
+    
+        <a href="/tag/#X-UA-Compatible" title="Tag: X-UA-Compatible" rel="tag">X-UA-Compatible</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#前言" id="markdown-toc-前言">前言</a></li>
+  <li><a href="#代码场景" id="markdown-toc-代码场景">代码场景</a></li>
+  <li><a href="#常用的例子" id="markdown-toc-常用的例子">常用的例子：</a></li>
+  <li><a href="#ie文档兼容性模式所有可能的值" id="markdown-toc-ie文档兼容性模式所有可能的值">IE文档兼容性模式所有可能的值：</a></li>
+  <li><a href="#注意事项" id="markdown-toc-注意事项">注意事项：</a></li>
+</ul>
+
+<h1 id="前言">前言</h1>
+<blockquote>
+  <p>X-UA-Compatible是自从IE8新加的一个设置，对于IE8以下的浏览器是不识别的。通过在meta中设置X-UA-Compatible的值，可以指定网页的兼容性模式设置。
+在网页中指定的模式优先权高于服务器中(通过HTTP Header)所指定的模式。 兼容性模式设置优先级：</p>
+  <ul>
+    <li>meta tag &gt; http header</li>
+    <li>meta tag &gt; http header</li>
+  </ul>
+</blockquote>
+
+<h1 id="代码场景">代码场景</h1>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="c">&lt;!--[if IE 8]&gt;
+    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=7,chrome=1" /&gt;
+    &lt;![endif]--&gt;</span>
+    <span class="c">&lt;!--[if ! IE 8]&gt;
+    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" /&gt;      
+    &lt;![endif]--&gt;</span>
+   
+    <span class="c">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="Scripts/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="Scripts/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"Styles/style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span> 
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"Scripts/jquery.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+     <span class="c">&lt;!--[if IE 8]&gt;
+    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=7,chrome=1" /&gt;
+    &lt;![endif]--&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"Styles/style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
+    <span class="c">&lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+<h1 id="常用的例子">常用的例子：</h1>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7"</span>&gt;
+<span class="c">#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  </span>
+&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=8"</span>&gt;  
+<span class="c">#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  </span>
+&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=edge"</span>&gt;  
+<span class="c">#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  </span>
+&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7,IE=9"</span>&gt;  
+&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7,9"</span>&gt;  
+&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=Edge,chrome=1"</span>&gt;
+<span class="c">#以上代码IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.</span>
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7"</span> &gt;   
+<span class="c">#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  </span>
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=8"</span> &gt;   
+<span class="c">#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  </span>
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=edge"</span> &gt;   
+<span class="c">#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  </span>
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7,IE=9"</span> &gt;   
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7,9"</span> &gt;   
+&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=Edge,chrome=1"</span> &gt;
+<span class="c"># 以上代码IE = edge告诉IE使用最新的引擎渲染网页，chrome = 1则可以激活Chrome Frame .</span>
+Google Chrome Frame 百科
+“IE<span class="o">=</span>Edge,chrome<span class="o">=</span>1″这样简单快捷，但是弊端是代码将无法通过W3C验证。其实这并不是问题，毕竟标准只是标准，如果只有这一个“错误”完全不会有任何不良的影响。
+</code></pre>
+</div>
+
+<h1 id="ie文档兼容性模式所有可能的值">IE文档兼容性模式所有可能的值：</h1>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Emulate IE8 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&lt;!DOCTYPE&gt;指令。</span>
+Emulate IE7 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&lt;!DOCTYPE&gt;指令。对于许多网页来说这是最推荐的兼容性模式。</span>
+IE5 mode <span class="c">#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。</span>
+IE7 mode <span class="c">#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&lt;!DOCTYPE&gt;指令。</span>
+IE8 mode <span class="c">#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。</span>
+Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。</span>
+Emulate IE8 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&lt;!DOCTYPE&gt;指令。</span>
+Emulate IE7 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&lt;!DOCTYPE&gt;指令。对于许多网页来说这是最推荐的兼容性模式。</span>
+IE5 mode <span class="c">#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。</span>
+IE7 mode <span class="c">#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&lt;!DOCTYPE&gt;指令。</span>
+IE8 mode <span class="c">#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。</span>
+Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。</span>
+</code></pre>
+</div>
+<h1 id="注意事项">注意事项：</h1>
+
+<ol>
+  <li>根据官网定义X-UA-compatible 标头不区分大小写；不过，它必须显示在网页中除 title 元素和其他 meta 元素以外的所有其他元素之前。如果不是的话，它不起作用</li>
+  <li>content的内容是IE=8，或者IE=edge等值，注意不是IE8或者直接写个edge的值，否则不起作用</li>
+</ol>
+
+<p>如果对WEb服务器了解，可以直接配置一下VirtualHost: Apache:</p>
+<div class="language-apache highlighter-rouge"><pre class="highlight"><code><span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_setenvif.c</span><span class="p">&gt;
+</span>  <span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_headers.c</span><span class="p">&gt;
+</span>    <span class="nc">BrowserMatch</span> MSIE ie
+    <span class="nc">Header</span> <span class="ss">set</span> X-UA-Compatible "IE=Edge" env=ie
+    <span class="nc">BrowserMatch</span> chromeframe gcf
+    <span class="nc">Header</span> <span class="ss">append</span> X-UA-Compatible "chrome=1" env=gcf
+  <span class="p">&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
+&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
+&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_setenvif.c </span><span class="p">&gt;
+&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_headers.c </span><span class="p">&gt;
+</span><span class="nc">BrowserMatch</span> MSIE ie
+<span class="nc">Header</span> <span class="ss">set</span> X - UA - Compatible "IE=Edge" <span class="ss">env</span> = ie
+<span class="nc">BrowserMatch</span> chromeframe gcf
+<span class="nc">Header</span> <span class="ss">append</span> X - UA - Compatible "chrome=1" <span class="ss">env</span> = gcf
+<span class="p">&lt;/</span><span class="nl">IfModule</span><span class="sr"> </span><span class="p">&gt;
+&lt;/</span><span class="nl">IfModule</span><span class="sr"> </span><span class="p">&gt;
+</span></code></pre>
+</div>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/">如何进行浏览器条件注释？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#html" title="Category: html" rel="category">html</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>&nbsp;
+    
+        <a href="/tag/#浏览器兼容" title="Tag: 浏览器兼容" rel="tag">浏览器兼容</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#通过条件注释判断浏览器" id="markdown-toc-通过条件注释判断浏览器">通过条件注释判断浏览器</a></li>
+  <li><a href="#说明" id="markdown-toc-说明">说明</a></li>
+  <li><a href="#范例" id="markdown-toc-范例">范例</a></li>
+</ul>
+
+<h1 id="通过条件注释判断浏览器">通过条件注释判断浏览器</h1>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if !IE]&gt;除IE外都可识别&lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE]&gt; 所有的IE可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 6]&gt; 仅IE6可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if lt IE 6]&gt; IE6以及IE6以下版本可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if gte IE 6]&gt; IE6以及IE6以上版本可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 7]&gt; 仅IE7可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if lt IE 7]&gt; IE7以及IE7以下版本可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if gte IE 7]&gt; IE7以及IE7以上版本可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 8]&gt; 仅IE8可识别 &lt;![endif]--&gt;</span>
+<span class="c">&lt;!--[if IE 9]&gt; 仅IE9可识别 &lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+<h1 id="说明">说明</h1>
+<ol>
+  <li><code class="highlighter-rouge">! ： [if !IE]</code>
+    <ul>
+      <li>NOT运算符。这是摆立即在前面的功能，操作员，或子表达式扭转布尔表达式的意义。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">lt ： [if lt IE 5.5]</code>
+    <ul>
+      <li>小于运算符。如果第一个参数小于第二个参数，则返回true。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">lte ：[if lte IE 6]</code>
+    <ul>
+      <li>小于或等于运算。如果第一个参数是小于或等于第二个参数，则返回true。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">gt ：[if gt IE 5]</code>
+    <ul>
+      <li>大于运算符。如果第一个参数大于第二个参数，则返回true。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">gte ：[if gte IE 7]</code>
+    <ul>
+      <li>大于或等于运算。如果第一个参数是大于或等于第二个参数，则返回true。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">( ) ：[if !(IE 7)]</code>
+    <ul>
+      <li>子表达式运营商。在与布尔运算符用于创建更复杂的表达式。</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">&amp; ：[if (gt IE 5)&amp;(lt IE 7)]</code>
+    <ul>
+      <li>AND运算符。如果所有的子表达式计算结果为true，返回true</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">| ： if (IE 6)|(IE 7)]</code>
+    <ul>
+      <li>OR运算符。返回true，如果子表达式计算结果为true。</li>
+    </ul>
+  </li>
+</ol>
+
+<h1 id="范例">范例</h1>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if lt IE 9]&gt;
+加载CSS1
+&lt;!--[else]&gt;
+加载CSS2
+&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+<p>这样有效是有效,但是用HTML VALIDATOR里,报错,因为这个不符合XHTML 1.1的规范,
+如果把ELSE语句去掉,则正确.</p>
+
+<p>方法：
+加载CSS2</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if lt IE 9]&gt;
+加载CSS1(可以把要重写的写在这里).
+&lt;![endif]--&gt;</span>
+</code></pre>
+</div>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/">不同浏览器的的css识别符？</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-18
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#css" title="Category: css" rel="category">css</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#css" title="Tag: css" rel="tag">css</a>&nbsp;
+    
+        <a href="/tag/#浏览器兼容" title="Tag: 浏览器兼容" rel="tag">浏览器兼容</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#不同浏览器hack的标识符" id="markdown-toc-不同浏览器hack的标识符">不同浏览器hack的标识符</a></li>
+  <li><a href="#不同流浏览器的前缀" id="markdown-toc-不同流浏览器的前缀">不同流浏览器的前缀</a></li>
+</ul>
+
+<h1 id="不同浏览器hack的标识符">不同浏览器hack的标识符</h1>
+<div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nt">p</span><span class="p">{</span> <span class="nt">_color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6 专用*/</span>
+<span class="o">*</span><span class="nt">html</span> <span class="nt">p</span><span class="p">{</span> <span class="nl">color</span><span class="p">:</span><span class="mh">#red</span><span class="p">;</span> <span class="p">}</span>  <span class="cm">/*IE6 专用*/</span>
+<span class="nt">p</span><span class="p">{</span> <span class="o">+</span><span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6,7 专用*/</span>
+<span class="nt">p</span><span class="p">{</span> <span class="o">*</span><span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6,7 专用*/</span>
+<span class="o">*</span><span class="nt">html</span> <span class="nt">p</span><span class="p">{</span> <span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>    <span class="cm">/*IE6,7 专用*/</span>
+<span class="nt">p</span><span class="p">{</span> <span class="err">*+</span><span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;}</span>          <span class="cm">/*IE7 专用*/</span>
+<span class="nt">Body</span><span class="o">&gt;</span> <span class="nt">p</span><span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>  <span class="cm">/*屏蔽 IE6*/</span>
+<span class="nt">p</span><span class="p">{</span> <span class="nt">color</span><span class="nd">:red</span><span class="err">\</span><span class="nt">9</span><span class="p">;</span> <span class="p">}</span>          <span class="cm">/*IE8*/</span>   
+</code></pre>
+</div>
+
+<h1 id="不同流浏览器的前缀">不同流浏览器的前缀</h1>
+
+<ul>
+  <li>Firefox: -moz-</li>
+  <li>Safari: -webkit-</li>
+  <li>Opera: -o-</li>
+  <li>IE: -ms-</li>
+</ul>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -193,7 +596,7 @@
 
 <h1 id="实现">实现</h1>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Events</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Event</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">listen</span><span class="p">,</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">obj</span><span class="p">,</span> <span class="nx">one</span><span class="p">,</span> <span class="nx">remove</span><span class="p">,</span> <span class="nx">trigger</span><span class="p">,</span> <span class="nx">__this</span><span class="p">;</span>
     <span class="nx">obj</span> <span class="o">=</span> <span class="p">{};</span>
     <span class="nx">__this</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
@@ -458,82 +861,6 @@
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/">iframe有哪些缺点？</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-03-16
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#interview" title="Category: interview" rel="category">interview</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#答题思路和要点" id="markdown-toc-答题思路和要点">答题思路和要点</a></li>
-  <li><a href="#知识补充什么是并行加载" id="markdown-toc-知识补充什么是并行加载">知识补充：什么是并行加载？</a></li>
-  <li><a href="#加分项" id="markdown-toc-加分项">加分项</a></li>
-</ul>
-<h1 id="答题思路和要点">答题思路和要点</h1>
-<ol>
-  <li>iframe会阻塞主页面的onload事件;</li>
-  <li>搜索引擎的检索程序无法解读这种页面，不利于SEO;</li>
-  <li>会影响页面的并行加载;</li>
-</ol>
-
-<h1 id="知识补充什么是并行加载">知识补充：什么是并行加载？</h1>
-<p>并行加载： 同一时间针对同一域名下的请求。通常，iframe和所在页面在同一个域名下，而浏览器的并行加载数量是有限制的。</p>
-
-<h1 id="加分项">加分项</h1>
-<p>如何进行优化？
-通过DOM操作动态添加iframe的src属性，让其变成异步的，避免对页面的阻塞。</p>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/03/16/iframe%E6%9C%89%E5%93%AA%E4%BA%9B%E7%BC%BA%E7%82%B9/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -544,10 +871,10 @@
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1/1</span>
+          <span class="page_number ">1/2</span>
           
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+            <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
+            <a href="/page2" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -560,6 +887,12 @@
                     Recent Posts
                 </div>
                 <ul class="content-ul" recent>
+                    
+                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/">浏览器兼容模式内核渲染？</a></li>
+                    
+                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/">如何进行浏览器条件注释？</a></li>
+                    
+                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/">不同浏览器的的css识别符？</a></li>
                     
                         <li><a href="/2017/03/18/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/">如何实现一个简单的事件模型？</a></li>
                     
@@ -585,7 +918,25 @@
                             <span class="name">
                                 interview
                             </span>
-                            <span class="badge">4</span>
+                            <span class="badge">5</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#css" class="categories-list-item" cate="css">
+                            <span class="name">
+                                css
+                            </span>
+                            <span class="badge">1</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#html" class="categories-list-item" cate="html">
+                            <span class="name">
+                                html
+                            </span>
+                            <span class="badge">1</span>
                         </a>
                     </li>
                     
@@ -611,7 +962,7 @@
                       
                       
                       
-                      <a href="/tag/#html" style="font-size: 9pt; color: #999;">html</a>
+                      <a href="/tag/#html" style="font-size: 18pt; color: #000;">html</a>
                     
                       
                       
@@ -626,6 +977,20 @@
                       
                       
                       <a href="/tag/#javascript" style="font-size: 9pt; color: #999;">javascript</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#浏览器兼容" style="font-size: 13.5pt; color: #444;">浏览器兼容</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#X-UA-Compatible" style="font-size: 9pt; color: #999;">X-UA-Compatible</a>
                     
                 </div>
             </div>
