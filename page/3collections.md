@@ -11,17 +11,10 @@ type: page
 
 ## 工具
 
-* [box-shadow generator](http://www.cssmatic.com/box-shadow)
-
-    生成 box-shadow 的工具。
-
-* [gradient-generator](http://www.cssmatic.com/gradient-generator)
-
-    渐变生成器。
 
 * [Ultimate CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/)
 
-    也是渐变生成器
+    渐变生成器
 
 * [CSS Generators -CSSREFLEX](http://www.cssreflex.com/css-generators/)
 

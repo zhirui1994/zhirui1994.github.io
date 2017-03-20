@@ -78,8 +78,6 @@
         }
     }
     .right {
-        position: sticky;
-        top: 0;
         .wrap {
             position: sticky;
             top: 0;
@@ -155,9 +153,6 @@
 }
 @media screen and (max-width: 770px) {
     .page[index] {
-        .right{
-                display: none;
-            }
         .left>ul li {
             h2 {
                 font-size: 22px;
