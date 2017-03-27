@@ -121,6 +121,10 @@
                 
                     
                 
+                    
+                
+                    
+                
             </ul>
         </nav>
     </div>
@@ -133,6 +137,445 @@
         <small>Living for coding the world!</small>
         <hr>
         <ul>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/27/%E6%94%BE%E7%96%97%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5/">放疗的四个阶段</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#DICOM" title="Category: DICOM" rel="category">DICOM</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#DICOM" title="Tag: DICOM" rel="tag">DICOM</a>&nbsp;
+    
+        <a href="/tag/#放疗过程" title="Tag: 放疗过程" rel="tag">放疗过程</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="放疗的四个阶段">放疗的四个阶段：</h1>
+<ol>
+  <li>体模阶段： 病人进行CT扫描，产生DICOM CT image 研究</li>
+  <li>计划阶段： 一个虚拟模拟软件请求CT机使用DICOM接口发送CT图像，接收到图像后在重建3D假体上进行虚拟模拟。这时产生RT Structure Set对象，包含了肿瘤、危险器官等结构。同时一个相关联的RT Plan也产生了，包含了射线的几何数据信息。数字重建放射图像（Digitally-reconstructured radiographs，DRRs）也有可能建立这种影像属于RT Image对象。接着治疗计划系统读入CT图像，RT Structure Set和RT Plan。在计划系统中，物理师可能根据需要加入一些射束修整器，并且为所作的计划计算剂量数据。一个新的RT Plan对象产生了，同时也可以建立RT Image对象（如DRRs）。</li>
+  <li>计划确认： 记录和验证系统获得完整的RT Plan对象，并且使用RT Plan中的数据来初始化直接加速器。在这个阶段，电子射野影像系统（EPID)可以建立属于RT Image对象的射野证实片，或者将采集的射野图像与上一步骤中建立的DRRs相比较。</li>
+  <li>计划执行： 直线加速器或者记录验证系统会建立RT Treatment Record 对象。通常对每一次治疗建立一个RT Treatment Record。</li>
+</ol>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/27/%E6%94%BE%E7%96%97%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/27/%E4%B8%93%E6%9C%89%E8%AF%8D%E6%B1%87%E8%A7%A3%E9%87%8A/">DICOM关键词汇</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#DICOM" title="Category: DICOM" rel="category">DICOM</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#DICOM" title="Tag: DICOM" rel="tag">DICOM</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul>
+  <li>PACS: Picture Archiving and Communication Systems
+    <blockquote>
+      <p>在影像诊断学中，医学影像存档与通信系统（Picture archiving and communication system，PACS）是一种专门用来储存、取得、传送与展示医疗影像的电脑或网络系统.</p>
+    </blockquote>
+  </li>
+  <li>DICOM: Digital Imaging and Communications in Medicine医疗数位影像传输协定
+    <blockquote>
+      <p>医疗数位影像传输协定（DICOM，Digital Imaging and Communications in Medicine）是一组通用的标准协定，在对于医学影像的处理、储存、打印、传输上。它包含了档案格式的定义及网络通信协定。DICOM是以TCP/IP为基础的应用协定，并以TCP/IP联系各个系统。两个能接受DICOM格式的医疗仪器间，可借由DICOM格式的档案，来接收与交换影像及病人资料。
+DICOM可以整合不同厂商的医疗影像仪器、服务器、工作站、打印机和网络设备，使它们都能整合在PACS系统中。许多不同厂商的仪器、服务器、工作站都根据DICOM的标准，来制造支援DICOM机器。</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="dicom-rt-内容">DICOM RT 内容</h2>
+<ol>
+  <li>RT Structure Set SOP: 包含与病人组织构造相关的信息，主要是医生感兴趣的区域（RIO)。</li>
+  <li>RT Plan SOP:  包含一个体内或体外放射治疗的几何数据和放射计量数据;</li>
+  <li>RT Image SOP: 指定了由圆锥形的成像几何形成的放射治疗图像;</li>
+  <li>RT Does SOP: 治疗计划系统产生的一种或多种格式的剂量数据，包括三维数据、等计量曲线、DVH（Does-volume histogram）或剂量点等;</li>
+  <li>RT Beams Treatment Record Infomation SOP,RT Brachy Treatment Record Information SOP, RT Treatment Summary Record infomation SOP: 包含真实放射治疗的数据;</li>
+</ol>
+
+<ul>
+  <li>CT: computed tomography 计算机断层成像</li>
+  <li>ROI: Region of interest 感兴趣区域</li>
+  <li>IOD: 信息对象描述</li>
+  <li>DVH: 剂量体积直方图</li>
+  <li>SOP: 服务对象对</li>
+  <li>brachy: Brachytherapy 近距离治疗</li>
+  <li>BRHC: Bottom Right Hand Corner 右下角</li>
+  <li>CC: Counter-clockwise 逆时针</li>
+  <li>CDA: Clinical Document Architecture (HL7)临床文档架构（HL7）</li>
+  <li>CTV: Clinical target volume临床靶区</li>
+  <li>CW: Clockwise顺时针</li>
+  <li>
+    <p>DRR: Digitally-reconstructed radiograph 数字重建的射线图</p>
+  </li>
+  <li>
+    <p>EPI: Electronic Portal Image</p>
+  </li>
+  <li>
+    <p>EPID: Electronic Portal Image Device</p>
+  </li>
+  <li>
+    <p>GTV: Gross tumor volume 肿瘤体积</p>
+  </li>
+  <li>
+    <p>HL7: Health Level 7 健康水平7</p>
+  </li>
+  <li>
+    <p>HMD: Hierarchical Message Description (HL7) 分层消息说明</p>
+  </li>
+  <li>
+    <p>IE: Information Entity 信息实体</p>
+  </li>
+  <li>
+    <p>MLC: Multileaf (multi-element) collimator 多叶（多元件）准直器</p>
+  </li>
+  <li>
+    <p>MU: Monitor unit 监控单元</p>
+  </li>
+  <li>
+    <p>MV: Megavolt 兆</p>
+  </li>
+  <li>
+    <p>OID: Object Identifier (ISO 8824) 对象标识符</p>
+  </li>
+  <li>
+    <p>PTV: Planning target volume 计划靶区</p>
+  </li>
+  <li>
+    <p>R＆V: Record and verify 记录和验证</p>
+  </li>
+  <li>
+    <p>NEMA: National Electrical Manufacturers Association 美国电气制造商协会</p>
+  </li>
+  <li>
+    <p>RT: Radiotherapy 放射治疗</p>
+  </li>
+  <li>
+    <p>SAD: Source-axis distance 源-轴距离</p>
+  </li>
+  <li>
+    <p>SCP: Service Class Provider 服务类提供者</p>
+  </li>
+  <li>
+    <p>SCP：服务类提供者</p>
+  </li>
+  <li>
+    <p>SCTP：结构化的临床试验方案（HL7）</p>
+  </li>
+  <li>
+    <p>SCU： 服务类用户</p>
+  </li>
+  <li>
+    <p>SD： 结构化文档（HL7）</p>
+  </li>
+  <li>
+    <p>SID： 源图像受体距离</p>
+  </li>
+  <li>
+    <p>SOD： 源对象的距离</p>
+  </li>
+  <li>
+    <p>SPL：结构性产品标签（HL7）</p>
+  </li>
+  <li>
+    <p>SR：结构化报告</p>
+  </li>
+  <li>
+    <p>SSD：Source-skin distance 源皮距</p>
+  </li>
+  <li>
+    <p>TLHC: Top Left Hand Corner 左上角</p>
+  </li>
+  <li>
+    <p>UDI: Unique Device Identifier唯一设备标识符</p>
+  </li>
+  <li>
+    <p>UID: Unique Identifier唯一标识符</p>
+  </li>
+  <li>
+    <p>UUID: Universal Unique Identifier (ISO/IEC 11578)通用唯一标识（ISO / IEC 11578）</p>
+  </li>
+  <li>
+    <p>SNA: Cross-Enterprise Document Sharing Profile (IHE)跨企业文档共享档案（IHE）</p>
+  </li>
+  <li>MRI: Magnetic Resonance Imaging磁共振成像</li>
+</ul>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/27/%E4%B8%93%E6%9C%89%E8%AF%8D%E6%B1%87%E8%A7%A3%E9%87%8A/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/27/RT-Image/">RT Image IOD</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#DICOM" title="Category: DICOM" rel="category">DICOM</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#DICOM" title="Tag: DICOM" rel="tag">DICOM</a>&nbsp;
+    
+        <a href="/tag/#RT Image IOD" title="Tag: RT Image IOD" rel="tag">RT Image IOD</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="dicom-rt-image-iod">DICOM RT Image IOD:</h1>
+
+<ul>
+  <li>Patient
+    <ul>
+      <li>Patient 必选</li>
+      <li>Clinicail Trial Subject 可选</li>
+    </ul>
+  </li>
+  <li>Study
+    <ul>
+      <li>General Study 必选</li>
+      <li>Patient study 可选</li>
+      <li>Clinical Trial Study 可选</li>
+    </ul>
+  </li>
+  <li>Series
+    <ul>
+      <li>RT Series 必选</li>
+      <li>Clinical Trial Series 可选</li>
+    </ul>
+  </li>
+  <li>Frame of Reference
+    <ul>
+      <li>Frame of Reference 可选</li>
+    </ul>
+  </li>
+  <li>Equipment
+    <ul>
+      <li>General Equipment 必选</li>
+    </ul>
+  </li>
+  <li>Image
+    <ul>
+      <li>General Image 必选</li>
+      <li>Image Pixel 必选 用于记录放疗图像像素数据和相关信息</li>
+      <li>Contrast/bolus 可选</li>
+      <li>Cine 可选</li>
+      <li>Multi-Frame 可选</li>
+      <li>RT Image  必选 用于描述投影图的放射治疗特殊属性。</li>
+      <li>Modality LUT 可选</li>
+      <li>VOI LUT 可选</li>
+      <li>Approval 可选</li>
+      <li>Curve 可选 用于描述准直器开口、射野修正设备、病人解剖结构和目标体积等信息。</li>
+      <li>Audio 可选</li>
+      <li>SOP Common 必选</li>
+    </ul>
+  </li>
+</ul>
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/27/RT-Image/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
+                  <a class="post-link" href="/2017/03/27/DICOM%E4%B8%AD%E7%9A%84%E5%9D%90%E6%A0%87%E7%B3%BB/">DICOM中的坐标系</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2017-03-27
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#DICOM" title="Category: DICOM" rel="category">DICOM</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#DICOM" title="Tag: DICOM" rel="tag">DICOM</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <h1 id="dicom中的坐标系">DICOM中的坐标系</h1>
+
+<h2 id="patient-coordinate-system-患者坐标系统">Patient Coordinate System 患者坐标系统</h2>
+<p>分类： BIPED（双足动物）和 QUADRUPED （四足动物）</p>
+
+<p>以人为例，定义患者坐标：</p>
+<ul>
+  <li>X轴，正方向为从右到左</li>
+  <li>Y轴，正方向从前胸到后背</li>
+  <li>Z轴，正方向为脚底到头顶</li>
+</ul>
+
+<h1 id="rcs-reference-coordinate-system-参考坐标系统">RCS( Reference Coordinate System) 参考坐标系统</h1>
+<p>RCS坐标系用于度量DICOM参考帧。
+RCS是右手“笛卡尔坐标系统”，笛卡尔坐标系是我们常见的三维空间坐标系统，根据x、y、z三轴的相互顺序分为右手坐标系和左手坐标系</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2017/03/27/DICOM%E4%B8%AD%E7%9A%84%E5%9D%90%E6%A0%87%E7%B3%BB/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
             
               <li>
                 <h2>
@@ -275,557 +718,6 @@ Opera现已改用Google Chrome的Blink内核。</p>
                 <hr>
               </li>
             
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/03/20/js%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">js中创建对象的方式有哪几种?</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-03-20
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#javascript" title="Category: javascript" rel="category">javascript</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#javascript" title="Tag: javascript" rel="tag">javascript</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#1使用对象字面量创建一个对象推荐" id="markdown-toc-1使用对象字面量创建一个对象推荐">1.使用对象字面量{}创建一个对象(推荐)</a></li>
-  <li><a href="#2new-object创建对象" id="markdown-toc-2new-object创建对象">2.new Object()创建对象</a></li>
-  <li><a href="#3工厂模式" id="markdown-toc-3工厂模式">3.工厂模式</a></li>
-  <li><a href="#4构造函数模式" id="markdown-toc-4构造函数模式">4.构造函数模式</a></li>
-  <li><a href="#5原型模式" id="markdown-toc-5原型模式">5.原型模式</a></li>
-  <li><a href="#6混合模式" id="markdown-toc-6混合模式">6.混合模式</a></li>
-</ul>
-
-<h1 id="1使用对象字面量创建一个对象推荐">1.使用对象字面量{}创建一个对象(推荐)</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'zhirui'</span><span class="p">;</span> <span class="c1">//对象属性</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="c1">//对象方法</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
-
-<h1 id="2new-object创建对象">2.new Object()创建对象</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'zhirui'</span><span class="p">;</span> <span class="c1">//对象属性</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
-    <span class="nx">person</span><span class="p">.</span><span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span> <span class="c1">//对象方法</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre>
-</div>
-
-<h1 id="3工厂模式">3.工厂模式</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">createPerson</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">job</span><span class="p">){</span>
-    <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
-    <span class="nx">o</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="nx">o</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-    <span class="nx">o</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="nx">job</span><span class="p">;</span>
-    <span class="nx">o</span><span class="p">.</span><span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
-    <span class="p">}</span>
-    
-    <span class="k">return</span> <span class="nx">o</span><span class="p">;</span>
-<span class="p">};</span>
-
-<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="nx">createPerson</span><span class="p">(</span><span class="s1">'zhirui'</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">'frontEnd'</span><span class="p">);</span>
-<span class="nx">person</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
-</code></pre>
-</div>
-<h1 id="4构造函数模式">4.构造函数模式</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">job</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="nx">job</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-<h1 id="5原型模式">5.原型模式</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(){};</span>
-
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s1">'zhirui'</span><span class="p">;</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">23</span><span class="p">;</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="s1">'frontEnd'</span><span class="p">;</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">doSomething</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">);</span>
-<span class="p">}</span>
- 
-<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
-</code></pre>
-</div>
-
-<h1 id="6混合模式">6.混合模式</h1>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">,</span> <span class="nx">job</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">job</span> <span class="o">=</span> <span class="nx">job</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="na">constructor</span><span class="p">:</span> <span class="nx">Person</span><span class="p">,</span>
-    <span class="na">doSomething</span><span class="p">:</span> <span class="kd">function</span><span class="p">(){</span>
-        <span class="nx">alert</span><span class="p">(</span><span class="s1">'Hello world!'</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">var</span> <span class="nx">person</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s1">'zhirui'</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="s1">'frontEnd'</span><span class="p">);</span>
-</code></pre>
-</div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/03/20/js%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/">浏览器兼容模式渲染？</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-03-18
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#html" title="Category: html" rel="category">html</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>&nbsp;
-    
-        <a href="/tag/#浏览器兼容" title="Tag: 浏览器兼容" rel="tag">浏览器兼容</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#前言" id="markdown-toc-前言">前言</a></li>
-  <li><a href="#代码场景" id="markdown-toc-代码场景">代码场景</a></li>
-  <li><a href="#常用的例子" id="markdown-toc-常用的例子">常用的例子：</a></li>
-  <li><a href="#ie文档兼容性模式所有可能的值" id="markdown-toc-ie文档兼容性模式所有可能的值">IE文档兼容性模式所有可能的值：</a></li>
-  <li><a href="#注意事项" id="markdown-toc-注意事项">注意事项：</a></li>
-</ul>
-
-<h1 id="前言">前言</h1>
-<blockquote>
-  <p>X-UA-Compatible是自从IE8新加的一个设置，对于IE8以下的浏览器是不识别的。通过在meta中设置X-UA-Compatible的值，可以指定网页的兼容性模式设置。
-在网页中指定的模式优先权高于服务器中(通过HTTP Header)所指定的模式。 兼容性模式设置优先级：</p>
-  <ul>
-    <li>meta tag &gt; http header</li>
-    <li>meta tag &gt; http header</li>
-  </ul>
-</blockquote>
-
-<h1 id="代码场景">代码场景</h1>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code> <span class="c">&lt;!--[if IE 8]&gt;
-    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=7,chrome=1" /&gt;
-    &lt;![endif]--&gt;</span>
-    <span class="c">&lt;!--[if ! IE 8]&gt;
-    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" /&gt;      
-    &lt;![endif]--&gt;</span>
-   
-    <span class="c">&lt;!--[if lt IE 9]&gt;
-      &lt;script src="Scripts/html5shiv.min.js"&gt;&lt;/script&gt;
-      &lt;script src="Scripts/respond.min.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;</span>
-
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"Styles/style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span> 
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"Scripts/jquery.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
-     <span class="c">&lt;!--[if IE 8]&gt;
-    &lt;meta http-equiv = "X-UA-Compatible" content = "IE=7,chrome=1" /&gt;
-    &lt;![endif]--&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"Styles/style.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="nt">/&gt;</span>
-    <span class="c">&lt;!--[if lt IE 9]&gt;
-      &lt;script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"&gt;&lt;/script&gt;
-      &lt;script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
-    &lt;![endif]--&gt;</span>
-</code></pre>
-</div>
-
-<h1 id="常用的例子">常用的例子：</h1>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7"</span>&gt;
-<span class="c">#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  </span>
-&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=8"</span>&gt;  
-<span class="c">#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  </span>
-&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=edge"</span>&gt;  
-<span class="c">#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  </span>
-&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7,IE=9"</span>&gt;  
-&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=7,9"</span>&gt;  
-&lt;meta http-equiv<span class="o">=</span><span class="s2">"X-UA-Compatible"</span> <span class="nv">content</span><span class="o">=</span><span class="s2">"IE=Edge,chrome=1"</span>&gt;
-<span class="c">#以上代码IE=edge告诉IE使用最新的引擎渲染网页，chrome=1则可以激活Chrome Frame.</span>
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7"</span> &gt;   
-<span class="c">#以上代码告诉IE浏览器，无论是否用DTD声明文档标准，IE8/9都会以IE7引擎来渲染页面。  </span>
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=8"</span> &gt;   
-<span class="c">#以上代码告诉IE浏览器，IE8/9都会以IE8引擎来渲染页面。  </span>
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=edge"</span> &gt;   
-<span class="c">#以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。  </span>
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7,IE=9"</span> &gt;   
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=7,9"</span> &gt;   
-&lt;meta http-equiv <span class="o">=</span> <span class="s2">"X-UA-Compatible"</span> content <span class="o">=</span> <span class="s2">"IE=Edge,chrome=1"</span> &gt;
-<span class="c"># 以上代码IE = edge告诉IE使用最新的引擎渲染网页，chrome = 1则可以激活Chrome Frame .</span>
-Google Chrome Frame 百科
-“IE<span class="o">=</span>Edge,chrome<span class="o">=</span>1″这样简单快捷，但是弊端是代码将无法通过W3C验证。其实这并不是问题，毕竟标准只是标准，如果只有这一个“错误”完全不会有任何不良的影响。
-</code></pre>
-</div>
-
-<h1 id="ie文档兼容性模式所有可能的值">IE文档兼容性模式所有可能的值：</h1>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>Emulate IE8 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&lt;!DOCTYPE&gt;指令。</span>
-Emulate IE7 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&lt;!DOCTYPE&gt;指令。对于许多网页来说这是最推荐的兼容性模式。</span>
-IE5 mode <span class="c">#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。</span>
-IE7 mode <span class="c">#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&lt;!DOCTYPE&gt;指令。</span>
-IE8 mode <span class="c">#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。</span>
-Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。</span>
-Emulate IE8 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE8 Standards mode而quirks mode会显示成IE5 mode。不同于IE8 mode，Emulate IE8 mode重视&lt;!DOCTYPE&gt;指令。</span>
-Emulate IE7 mode <span class="c">#指示IE使用&lt;!DOCTYPE&gt;指令来决定如何编译内容。Standards mode指令会显示成IE7 Standards mode而quirks mode会显示成IE5 mode。不同于IE7 mode，Emulate IE7 mode重视&lt;!DOCTYPE&gt;指令。对于许多网页来说这是最推荐的兼容性模式。</span>
-IE5 mode <span class="c">#编译内容如同IE7的quirks mode之显示状况，和IE5中显示的非常类似。</span>
-IE7 mode <span class="c">#编译内容如同IE7的standards mode之显示状况，无论网页是否含有&lt;!DOCTYPE&gt;指令。</span>
-IE8 mode <span class="c">#提供对业界标准的最高支持，包含 W3C Cascading Style Sheets Level 2.1 Specification和W3C Selectors API，并有限的支持 W3C Cascading Style Sheets Level 3 Specification (Working Draft)。</span>
-Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。当使用IE8时其等同于IE8 mode。若(假定)未来放出支持更高兼容性模式的IE，使用Edge mode的页面会使用该版本能支持的最高模式来显示内容。同样的那些页面在使用IE8浏览时仍会照常显示。</span>
-</code></pre>
-</div>
-<h1 id="注意事项">注意事项：</h1>
-
-<ol>
-  <li>根据官网定义X-UA-compatible 标头不区分大小写；不过，它必须显示在网页中除 title 元素和其他 meta 元素以外的所有其他元素之前。如果不是的话，它不起作用</li>
-  <li>content的内容是IE=8，或者IE=edge等值，注意不是IE8或者直接写个edge的值，否则不起作用</li>
-</ol>
-
-<p>如果对WEb服务器了解，可以直接配置一下VirtualHost: Apache:</p>
-<div class="language-apache highlighter-rouge"><pre class="highlight"><code><span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_setenvif.c</span><span class="p">&gt;
-</span>  <span class="p">&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_headers.c</span><span class="p">&gt;
-</span>    <span class="nc">BrowserMatch</span> MSIE ie
-    <span class="nc">Header</span> <span class="ss">set</span> X-UA-Compatible "IE=Edge" env=ie
-    <span class="nc">BrowserMatch</span> chromeframe gcf
-    <span class="nc">Header</span> <span class="ss">append</span> X-UA-Compatible "chrome=1" env=gcf
-  <span class="p">&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
-&lt;/</span><span class="nl">IfModule</span><span class="p">&gt;
-&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_setenvif.c </span><span class="p">&gt;
-&lt;</span><span class="nl">IfModule</span><span class="sr"> mod_headers.c </span><span class="p">&gt;
-</span><span class="nc">BrowserMatch</span> MSIE ie
-<span class="nc">Header</span> <span class="ss">set</span> X - UA - Compatible "IE=Edge" <span class="ss">env</span> = ie
-<span class="nc">BrowserMatch</span> chromeframe gcf
-<span class="nc">Header</span> <span class="ss">append</span> X - UA - Compatible "chrome=1" <span class="ss">env</span> = gcf
-<span class="p">&lt;/</span><span class="nl">IfModule</span><span class="sr"> </span><span class="p">&gt;
-&lt;/</span><span class="nl">IfModule</span><span class="sr"> </span><span class="p">&gt;
-</span></code></pre>
-</div>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/">如何进行浏览器条件注释？</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-03-18
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#html" title="Category: html" rel="category">html</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#html" title="Tag: html" rel="tag">html</a>&nbsp;
-    
-        <a href="/tag/#浏览器兼容" title="Tag: 浏览器兼容" rel="tag">浏览器兼容</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#通过条件注释判断浏览器" id="markdown-toc-通过条件注释判断浏览器">通过条件注释判断浏览器</a></li>
-  <li><a href="#说明" id="markdown-toc-说明">说明</a></li>
-  <li><a href="#范例" id="markdown-toc-范例">范例</a></li>
-</ul>
-
-<h1 id="通过条件注释判断浏览器">通过条件注释判断浏览器</h1>
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if !IE]&gt;除IE外都可识别&lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if IE]&gt; 所有的IE可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if IE 6]&gt; 仅IE6可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if lt IE 6]&gt; IE6以及IE6以下版本可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if gte IE 6]&gt; IE6以及IE6以上版本可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if IE 7]&gt; 仅IE7可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if lt IE 7]&gt; IE7以及IE7以下版本可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if gte IE 7]&gt; IE7以及IE7以上版本可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if IE 8]&gt; 仅IE8可识别 &lt;![endif]--&gt;</span>
-<span class="c">&lt;!--[if IE 9]&gt; 仅IE9可识别 &lt;![endif]--&gt;</span>
-</code></pre>
-</div>
-
-<h1 id="说明">说明</h1>
-<ol>
-  <li><code class="highlighter-rouge">! ： [if !IE]</code>
-    <ul>
-      <li>NOT运算符。这是摆立即在前面的功能，操作员，或子表达式扭转布尔表达式的意义。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">lt ： [if lt IE 5.5]</code>
-    <ul>
-      <li>小于运算符。如果第一个参数小于第二个参数，则返回true。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">lte ：[if lte IE 6]</code>
-    <ul>
-      <li>小于或等于运算。如果第一个参数是小于或等于第二个参数，则返回true。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">gt ：[if gt IE 5]</code>
-    <ul>
-      <li>大于运算符。如果第一个参数大于第二个参数，则返回true。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">gte ：[if gte IE 7]</code>
-    <ul>
-      <li>大于或等于运算。如果第一个参数是大于或等于第二个参数，则返回true。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">( ) ：[if !(IE 7)]</code>
-    <ul>
-      <li>子表达式运营商。在与布尔运算符用于创建更复杂的表达式。</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">&amp; ：[if (gt IE 5)&amp;(lt IE 7)]</code>
-    <ul>
-      <li>AND运算符。如果所有的子表达式计算结果为true，返回true</li>
-    </ul>
-  </li>
-  <li><code class="highlighter-rouge">| ： if (IE 6)|(IE 7)]</code>
-    <ul>
-      <li>OR运算符。返回true，如果子表达式计算结果为true。</li>
-    </ul>
-  </li>
-</ol>
-
-<h1 id="范例">范例</h1>
-
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if lt IE 9]&gt;
-加载CSS1
-&lt;!--[else]&gt;
-加载CSS2
-&lt;![endif]--&gt;</span>
-</code></pre>
-</div>
-<p>这样有效是有效,但是用HTML VALIDATOR里,报错,因为这个不符合XHTML 1.1的规范,
-如果把ELSE语句去掉,则正确.</p>
-
-<p>方法：
-加载CSS2</p>
-
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!--[if lt IE 9]&gt;
-加载CSS1(可以把要重写的写在这里).
-&lt;![endif]--&gt;</span>
-</code></pre>
-</div>
-
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
-              <li>
-                <h2>
-                  <a class="post-link" href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/">不同浏览器的的css识别符？</a>
-                </h2>
-                <div class="label">
-                    <div class="label-card">
-                        <i class="fa fa-calendar"></i>2017-03-18
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-                    <div class="label-card">
-                        
-                    </div>
-
-                    <div class="label-card">
-                    
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#css" title="Category: css" rel="category">css</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
-                    </div>
-
-                    <div class="label-card">
-                    
-<!-- <span class="point">•</span> -->
-<span class="pageTag">
-  <i class="fa fa-tags"></i>
-  
-    
-        <a href="/tag/#css" title="Tag: css" rel="tag">css</a>&nbsp;
-    
-        <a href="/tag/#浏览器兼容" title="Tag: 浏览器兼容" rel="tag">浏览器兼容</a>
-    
-  
-
-</span>
-
-                    </div>
-                </div>
-                <div class="excerpt">
-                    <ul id="markdown-toc">
-  <li><a href="#不同浏览器hack的标识符" id="markdown-toc-不同浏览器hack的标识符">不同浏览器hack的标识符</a></li>
-  <li><a href="#不同流浏览器的前缀" id="markdown-toc-不同流浏览器的前缀">不同流浏览器的前缀</a></li>
-</ul>
-
-<h1 id="不同浏览器hack的标识符">不同浏览器hack的标识符</h1>
-<div class="language-scss highlighter-rouge"><pre class="highlight"><code><span class="nt">p</span><span class="p">{</span> <span class="nt">_color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6 专用*/</span>
-<span class="o">*</span><span class="nt">html</span> <span class="nt">p</span><span class="p">{</span> <span class="nl">color</span><span class="p">:</span><span class="mh">#red</span><span class="p">;</span> <span class="p">}</span>  <span class="cm">/*IE6 专用*/</span>
-<span class="nt">p</span><span class="p">{</span> <span class="o">+</span><span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6,7 专用*/</span>
-<span class="nt">p</span><span class="p">{</span> <span class="o">*</span><span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>           <span class="cm">/*IE6,7 专用*/</span>
-<span class="o">*</span><span class="nt">html</span> <span class="nt">p</span><span class="p">{</span> <span class="nt">color</span><span class="nd">:red</span><span class="p">;</span> <span class="p">}</span>    <span class="cm">/*IE6,7 专用*/</span>
-<span class="nt">p</span><span class="p">{</span> <span class="err">*+</span><span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;}</span>          <span class="cm">/*IE7 专用*/</span>
-<span class="nt">Body</span><span class="o">&gt;</span> <span class="nt">p</span><span class="p">{</span> <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span> <span class="p">}</span>  <span class="cm">/*屏蔽 IE6*/</span>
-<span class="nt">p</span><span class="p">{</span> <span class="nt">color</span><span class="nd">:red</span><span class="err">\</span><span class="nt">9</span><span class="p">;</span> <span class="p">}</span>          <span class="cm">/*IE8*/</span>   
-</code></pre>
-</div>
-
-<h1 id="不同流浏览器的前缀">不同流浏览器的前缀</h1>
-
-<ul>
-  <li>Firefox: -moz-</li>
-  <li>Safari: -webkit-</li>
-  <li>Opera: -o-</li>
-  <li>IE: -ms-</li>
-</ul>
-
-                </div>
-                <div class="read-all">
-                    <a  href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/"><i class="fa fa-newspaper-o"></i>Read All</a>
-                </div>
-                <hr>
-              </li>
-            
         </ul>
 
 
@@ -836,10 +728,10 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
             <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
             <span class="previous disable"><i class="fa fa-angle-left"></i></span>
           
-          <span class="page_number ">1/2</span>
+          <span class="page_number ">1/4</span>
           
             <a href="/page2" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="/page2" class="next"><i class="fa fa-angle-double-right"></i></a>
+            <a href="/page4" class="next"><i class="fa fa-angle-double-right"></i></a>
           
         </div>
     </div>
@@ -853,25 +745,25 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2017/03/27/%E6%94%BE%E7%96%97%E7%9A%84%E5%9B%9B%E4%B8%AA%E9%98%B6%E6%AE%B5/">放疗的四个阶段</a></li>
+                    
+                        <li><a href="/2017/03/27/%E4%B8%93%E6%9C%89%E8%AF%8D%E6%B1%87%E8%A7%A3%E9%87%8A/">DICOM关键词汇</a></li>
+                    
+                        <li><a href="/2017/03/27/RT-Image/">RT Image IOD</a></li>
+                    
+                        <li><a href="/2017/03/27/DICOM%E4%B8%AD%E7%9A%84%E5%9D%90%E6%A0%87%E7%B3%BB/">DICOM中的坐标系</a></li>
+                    
                         <li><a href="/2017/03/20/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%9A%84%E4%BD%9C%E7%94%A8%E5%92%8C%E5%8E%9F%E7%90%86/">验证码是什么,它有什么作用?</a></li>
                     
                         <li><a href="/2017/03/20/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/">各浏览器的内核分别是什么?</a></li>
                     
+                        <li><a href="/2017/03/20/web%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">web前端面试题</a></li>
+                    
+                        <li><a href="/2017/03/20/redux%E6%98%AF%E4%BB%80%E4%B9%88/">redux是什么?</a></li>
+                    
+                        <li><a href="/2017/03/20/redux%E4%B8%AD%E7%9A%84%E6%9C%AF%E8%AF%AD/">redux中的术语的理解?</a></li>
+                    
                         <li><a href="/2017/03/20/js%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/">js中创建对象的方式有哪几种?</a></li>
-                    
-                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%BC%BA%E5%88%B6%E6%B8%B2%E6%9F%93/">浏览器兼容模式渲染？</a></li>
-                    
-                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%A6%82%E4%BD%95%E6%9D%A1%E4%BB%B6%E6%B3%A8%E9%87%8A/">如何进行浏览器条件注释？</a></li>
-                    
-                        <li><a href="/2017/03/18/%E6%B5%8F%E8%A7%88%E5%99%A8css%E8%AF%86%E5%88%AB%E7%AC%A6/">不同浏览器的的css识别符？</a></li>
-                    
-                        <li><a href="/2017/03/18/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E4%BB%B6%E6%A8%A1%E5%9E%8B/">如何实现一个简单的事件模型？</a></li>
-                    
-                        <li><a href="/2017/03/18/%E5%A6%82%E4%BD%95%E6%93%8D%E4%BD%9Ccookie/">如何操作cookie？</a></li>
-                    
-                        <li><a href="/2017/03/18/%E5%85%83%E7%B4%A0%E5%AE%9A%E4%BD%8D/">元素定位(position)有哪些？</a></li>
-                    
-                        <li><a href="/2017/03/17/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/">如何理解盒子模型？</a></li>
                     
                 </ul>
             </div>
@@ -889,7 +781,7 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                             <span class="name">
                                 interview
                             </span>
-                            <span class="badge">5</span>
+                            <span class="badge">6</span>
                         </a>
                     </li>
                     
@@ -898,7 +790,7 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                             <span class="name">
                                 javascript
                             </span>
-                            <span class="badge">2</span>
+                            <span class="badge">3</span>
                         </a>
                     </li>
                     
@@ -917,6 +809,24 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                                 html
                             </span>
                             <span class="badge">2</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#react" class="categories-list-item" cate="react">
+                            <span class="name">
+                                react
+                            </span>
+                            <span class="badge">2</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/category/#DICOM" class="categories-list-item" cate="DICOM">
+                            <span class="name">
+                                DICOM
+                            </span>
+                            <span class="badge">4</span>
                         </a>
                     </li>
                     
@@ -942,21 +852,21 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                       
                       
                       
-                      <a href="/tag/#html" style="font-size: 15pt; color: #333;">html</a>
+                      <a href="/tag/#html" style="font-size: 16pt; color: #222;">html</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#css" style="font-size: 15pt; color: #333;">css</a>
+                      <a href="/tag/#css" style="font-size: 16pt; color: #222;">css</a>
                     
                       
                       
                       
                       
                       
-                      <a href="/tag/#javascript" style="font-size: 15pt; color: #333;">javascript</a>
+                      <a href="/tag/#javascript" style="font-size: 18pt; color: #000;">javascript</a>
                     
                       
                       
@@ -977,7 +887,28 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                       
                       
                       
-                      <a href="/tag/#浏览器兼容" style="font-size: 18pt; color: #000;">浏览器兼容</a>
+                      <a href="/tag/#浏览器兼容" style="font-size: 16pt; color: #222;">浏览器兼容</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#jsonp" style="font-size: 9pt; color: #999;">jsonp</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#redux" style="font-size: 11.5pt; color: #777;">redux</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#react" style="font-size: 11.5pt; color: #777;">react</a>
                     
                       
                       
@@ -985,6 +916,27 @@ Edge mode <span class="c">#指示IE以目前可用的最高模式显示内容。
                       
                       
                       <a href="/tag/#网络安全" style="font-size: 9pt; color: #999;">网络安全</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#DICOM" style="font-size: 16pt; color: #222;">DICOM</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#RT Image IOD" style="font-size: 9pt; color: #999;">RT Image IOD</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#放疗过程" style="font-size: 9pt; color: #999;">放疗过程</a>
                     
                 </div>
             </div>
