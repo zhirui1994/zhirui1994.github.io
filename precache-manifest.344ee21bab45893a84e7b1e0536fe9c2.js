@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/static/media/github.c9e82c1f.svg"
   },
   {
-    "revision": "84e27f7c52aa15dab7c8cccd4f90a3b9",
+    "revision": "b8a88de82babb18ef28ab0b344bf1877",
     "url": "/index.html"
   }
 ];
