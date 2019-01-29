@@ -86,7 +86,7 @@ workbox.routing.registerRoute(
   workbox.strategies.cacheFirst()
 );
 workbox.routing.registerRoute(
-  /graphql/,
+  'https://api.github.com/graphql/',
   handleApiCallback,
   'POSTS'
 )
