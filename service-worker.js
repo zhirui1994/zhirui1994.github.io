@@ -73,15 +73,11 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 // 定制自己的需求
 // cache our data, and use networkFirst strategy.
 workbox.routing.registerRoute(
-  /(static\/)|(font-awesome-4.7.0\/)/, 
+  /static\/|font-awesome-4\.7\.0\/|\.ico|\.png|service-worker\.js|workbox-sw\.min\.js/, 
   workbox.strategies.cacheFirst()
 );
 workbox.routing.registerRoute(
   /https:\/\/api.github.com/,
-  workbox.strategies.staleWhileRevalidate()
-)
-workbox.routing.registerRoute(
-  /https:\/\/api.github.com/,
-  workbox.strategies.staleWhileRevalidate(),
+  workbox.strategies.cacheFirst(),
   'POSTS'
 )
