@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.fee6708bb4388fcb17beda3bd1da83f7.js");
+importScripts("/precache-manifest.005d47031f8d5bc50531cc9292f11db1.js");
 
 /* eslint-disable */
 // 引入workbox全局变量
