@@ -50,6 +50,22 @@ self.__precacheManifest = [
     "revision": "4.7.0",
     "url": "./font-awesome-4.7.0/fonts/FontAwesome.otf"
   },
+  {
+    "reversion": "0.0.1",
+    "url": "./service-worker.js"
+  },
+  {
+    "reversion": "3.6.3",
+    "url": "./workbox-sw.min.js"
+  },
+  {
+    "reversion": "0.0.1",
+    "url": "./favicon.ico"
+  },
+  {
+    "reversion": "0.0.1",
+    "url": "./apple-touch.icon.png"
+  },
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
