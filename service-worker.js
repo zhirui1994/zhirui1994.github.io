@@ -70,6 +70,15 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
+const handleApiCallback = ({url, event, params}) => {
+  if (url.indexOf('api') !== -1) {
+    return fetch(event.request)
+    .then((response) => {
+      return response.josn();
+    })
+  }
+};
+
 // 定制自己的需求
 // cache our data, and use networkFirst strategy.
 workbox.routing.registerRoute(
@@ -78,6 +87,6 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
   /https:\/\/api.github.com/,
-  workbox.strategies.cacheFirst(),
+  handleApiCallback,
   'POSTS'
 )
