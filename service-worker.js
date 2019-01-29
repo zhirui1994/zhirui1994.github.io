@@ -64,3 +64,8 @@ workbox.routing.registerRoute(
   /https:\/\/api.github.com/,
   workbox.strategies.staleWhileRevalidate()
 )
+workbox.routing.registerRoute(
+  /https:\/\/api.github.com/,
+  workbox.strategies.staleWhileRevalidate(),
+  'POSTS'
+)
