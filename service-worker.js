@@ -43,13 +43,12 @@ self.__precacheManifest = [
       "url": "/apple-touch.icon.png"
     },
   ].concat(self.__precacheManifest || []);
+const precacheFiles = self.__precacheManifest.map(item => item.url);
 
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open(cacheName).then(function(cache) {
-            return cache.addAll(
-                self.__precacheManifest.map(item => item.url)
-            )
+            return cache.addAll(precacheFiles)
         })
     );
 });
