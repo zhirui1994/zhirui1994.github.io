@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.9155ca3e9550dcc544ae2225c0a7f161.js");
+importScripts("/precache-manifest.e68e0e9154b016fc7a3b9fff20744b24.js");
 
 /* eslint-disable */
 
@@ -6,42 +6,42 @@ const cacheName = 'ZBLOG-cache-0.0.1';
 const dataCacheName = 'ZBLOG-data-cache-0.0.1';
 
 self.__precacheManifest = [
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/css/font-awesome.min.css"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.eot"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.svg"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.woff"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2"
-    },
-    {
-      "revision": "4.7.0",
-      "url": "/font-awesome-4.7.0/fonts/FontAwesome.otf"
-    },
-    {
-      "reversion": "0.0.1",
-      "url": "/favicon.ico"
-    },
-    {
-      "reversion": "0.0.1",
-      "url": "/apple-touch.icon.png"
-    },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/css/font-awesome.min.css"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.eot"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.svg"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.woff"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2"
+    // },
+    // {
+    //   "revision": "4.7.0",
+    //   "url": "/font-awesome-4.7.0/fonts/FontAwesome.otf"
+    // },
+    // {
+    //   "reversion": "0.0.1",
+    //   "url": "/favicon.ico"
+    // },
+    // {
+    //   "reversion": "0.0.1",
+    //   "url": "/apple-touch.icon.png"
+    // },
   ].concat(self.__precacheManifest || []);
 const precacheFiles = self.__precacheManifest.map(item => item.url);
 
