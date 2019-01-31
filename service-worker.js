@@ -1,4 +1,4 @@
-importScripts("/precache-manifest.e68e0e9154b016fc7a3b9fff20744b24.js");
+importScripts("/precache-manifest.9155ca3e9550dcc544ae2225c0a7f161.js");
 
 /* eslint-disable */
 
@@ -42,6 +42,10 @@ self.__precacheManifest = [
       "reversion": "0.0.1",
       "url": "/favicon.ico"
     },
+    {
+        "reversion": "0.0.1",
+        "url": "/service-worker.js"
+    }
   ].concat(self.__precacheManifest || []);
 const precacheFiles = self.__precacheManifest.map(item => item.url);
 
@@ -76,7 +80,7 @@ self.addEventListener('fetch', function(e) {
                     return response;
                 }).catch(function(err) {
                     console.log(err);
-                    caches.match(e.request.url).then(function(response) {
+                    return caches.match(e.request.url).then(function(response) {
                         if (response) {
                             return response;
                         }
